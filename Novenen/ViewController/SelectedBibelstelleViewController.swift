@@ -9,28 +9,23 @@ class SelectedBibelstelleViewController: UIViewController {
     var Kapitel : String?
     var KapitelText : String?
     
+    @IBOutlet weak var textViewKapiteltext: UITextView!
+    @IBOutlet weak var labelKapitel: UILabel!
+    @IBOutlet weak var labelBuch: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        Buchname = randomBibelstelle[0].Buchname
-        Buch = randomBibelstelle[0].Buch
-        Kapitel = randomBibelstelle[0].Kapitel
-        KapitelText = randomBibelstelle[0].KapitelText
-        //print(KapitelText)
-        //print("TEST")
         
-        // Do any additional setup after loading the view.
+        labelKapitel.numberOfLines = 0
+        [labelKapitel.sizeToFit]
+        labelBuch.numberOfLines = 0
+        [labelBuch.sizeToFit]
+        
+        self.navigationItem.title = randomBibelstelle[0].Buchname
+
+        labelBuch.text = randomBibelstelle[0].Buch
+        labelKapitel.text = randomBibelstelle[0].Kapitel
+        textViewKapiteltext.text = randomBibelstelle[0].Kapiteltext
+        
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

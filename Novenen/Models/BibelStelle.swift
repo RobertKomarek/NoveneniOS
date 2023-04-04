@@ -7,7 +7,7 @@ public struct BibelStelle : Decodable {
     var Buchname : String?
     var Buch : String?
     var Kapitel : String?
-    var KapitelText : String?
+    var Kapiteltext : String?
     
     public func getBibelstelle(jsonName:String) -> [BibelStelle] {
         
@@ -23,14 +23,8 @@ public struct BibelStelle : Decodable {
             }
         }
         
-        /*var test : [BibelStelle] = [
-            BibelStelle(LfdNr: 1, Id: "1", Buchname: "Buchname", Buch: "Buch", Kapitel: "Kapitel", KapitelText: "Kapiteltext"),
-            BibelStelle(LfdNr: 2, Id: "2", Buchname: "Buchname", Buch: "Buch", Kapitel: "Kapitel", KapitelText: "Kapiteltext"),
-            BibelStelle(LfdNr: 3, Id: "3", Buchname: "Buchname", Buch: "Buch", Kapitel: "Kapitel", KapitelText: "Kapiteltext")
-        ]*/
-        
         let randomInt = Int.random(in: 0..<jsonResult.count)
-        bibelStelle.append(BibelStelle(Buchname: jsonResult[randomInt].Buchname, Buch: jsonResult[randomInt].Buch, Kapitel: jsonResult[randomInt].Kapitel, KapitelText: jsonResult[randomInt].KapitelText))
+        bibelStelle.append(BibelStelle(Buchname: jsonResult[randomInt].Buchname, Buch: jsonResult[randomInt].Buch, Kapitel: jsonResult[randomInt].Kapitel, Kapiteltext: jsonResult[randomInt].Kapiteltext))
         
         return bibelStelle
     }

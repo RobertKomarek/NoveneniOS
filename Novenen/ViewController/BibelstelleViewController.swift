@@ -21,6 +21,10 @@ class BibelstelleViewController: UIViewController {
         "\"HIMMLISCHER VATER, DEIN WORT IST MEINEM FUß EINE LEUCHTE, EIN LICHT FÜR MEINE PFADE (Psalm 119)\""
      }
     
+    override func viewDidAppear(_ animated: Bool) {
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "zurück", style: UIBarButtonItem.Style.plain, target: nil, action: nil)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "segueRandomBibelstelle" {

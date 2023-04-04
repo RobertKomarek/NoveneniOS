@@ -91,7 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-193" y="715"/>
+            <point key="canvasLocation" x="-139" y="715"/>
         </scene>
         <!--Selected Novene-->
         <scene sceneID="9TL-Ww-bUt">
@@ -152,7 +152,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KBw-dZ-0Ok" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-194" y="1449"/>
+            <point key="canvasLocation" x="-139" y="1446"/>
         </scene>
         <!--Selected Bibelstelle-->
         <scene sceneID="2c9-dv-J7x">
@@ -161,14 +161,76 @@
                     <view key="view" contentMode="scaleToFill" id="FfQ-bS-sVq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mTl-Qi-Xsf" userLabel="Stack View Text">
+                                <rect key="frame" x="0.0" y="141.33333333333331" width="414" height="637.33333333333348"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLk-V4-fy6">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="33"/>
+                                        <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="33"/>
+                                        <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kapitel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BIE-ba-jTf" userLabel="Kapitel">
+                                        <rect key="frame" x="0.0" y="43" width="414" height="33"/>
+                                        <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="33"/>
+                                        <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="isO-k5-o2X">
+                                        <rect key="frame" x="0.0" y="86" width="414" height="551.33333333333337"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="eLk-V4-fy6" firstAttribute="top" secondItem="mTl-Qi-Xsf" secondAttribute="top" constant="25" id="Sgx-3R-T7E"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="wKi-y0-18w" userLabel="Stack View Buttons">
+                                <rect key="frame" x="0.0" y="778.66666666666663" width="414" height="34.333333333333371"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJ4-UQ-TBm" userLabel="Button Zurück">
+                                        <rect key="frame" x="0.0" y="0.0" width="182" height="34.333333333333336"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="arrowshape.turn.up.backward.fill" catalog="system" title=" Zurück"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ulq-0V-5a2" userLabel="Button Vor">
+                                        <rect key="frame" x="232" y="0.0" width="182" height="34.333333333333336"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="arrowshape.turn.up.forward.fill" catalog="system" title=" Vor"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="qe1-b2-RQ9"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="mTl-Qi-Xsf" firstAttribute="top" secondItem="qe1-b2-RQ9" secondAttribute="top" id="9Oe-Zm-m38"/>
+                            <constraint firstItem="wKi-y0-18w" firstAttribute="top" secondItem="mTl-Qi-Xsf" secondAttribute="bottom" id="F0Q-C6-qqX"/>
+                            <constraint firstItem="qe1-b2-RQ9" firstAttribute="trailing" secondItem="mTl-Qi-Xsf" secondAttribute="trailing" id="TjN-xr-XfG"/>
+                            <constraint firstItem="qe1-b2-RQ9" firstAttribute="trailing" secondItem="wKi-y0-18w" secondAttribute="trailing" id="kXe-cW-qEe"/>
+                            <constraint firstItem="mTl-Qi-Xsf" firstAttribute="leading" secondItem="qe1-b2-RQ9" secondAttribute="leading" id="mMG-zF-anM"/>
+                            <constraint firstItem="qe1-b2-RQ9" firstAttribute="bottom" secondItem="wKi-y0-18w" secondAttribute="bottom" id="oAI-bM-H96"/>
+                            <constraint firstItem="wKi-y0-18w" firstAttribute="leading" secondItem="qe1-b2-RQ9" secondAttribute="leading" id="zuc-7z-nan"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="TdF-Le-QNm"/>
+                    <connections>
+                        <outlet property="labelBuch" destination="eLk-V4-fy6" id="cpj-uJ-fY9"/>
+                        <outlet property="labelKapitel" destination="BIE-ba-jTf" id="9oS-m3-pBH"/>
+                        <outlet property="textViewKapiteltext" destination="isO-k5-o2X" id="SgN-Zf-XoA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iX4-JL-M3V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1312" y="1412"/>
+            <point key="canvasLocation" x="1311.5942028985507" y="1411.6071428571429"/>
         </scene>
         <!--Bibelstelle-->
         <scene sceneID="QoQ-Mg-q36">
@@ -179,13 +241,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="M9D-qc-H63">
-                                <rect key="frame" x="0.0" y="88" width="414" height="650"/>
+                                <rect key="frame" x="0.0" y="55" width="414" height="683"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bible" translatesAutoresizingMaskIntoConstraints="NO" id="Mcr-W4-H5U">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="317.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="334"/>
                                     </imageView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kd5-B2-oCY">
-                                        <rect key="frame" x="0.0" y="332.66666666666674" width="414" height="317.33333333333326"/>
+                                        <rect key="frame" x="0.0" y="349" width="414" height="334"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" name="Color"/>
@@ -212,12 +274,12 @@
                         <viewLayoutGuide key="safeArea" id="oD2-ot-LGP"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="M9D-qc-H63" firstAttribute="top" secondItem="czb-NE-18X" secondAttribute="top" constant="55" id="KKB-Tg-MqY"/>
                             <constraint firstItem="oD2-ot-LGP" firstAttribute="bottom" secondItem="fNx-XV-96f" secondAttribute="bottom" constant="25" id="WIF-Xc-jbZ"/>
                             <constraint firstItem="M9D-qc-H63" firstAttribute="leading" secondItem="oD2-ot-LGP" secondAttribute="leading" id="ZgG-IB-mPG"/>
                             <constraint firstItem="fNx-XV-96f" firstAttribute="top" secondItem="M9D-qc-H63" secondAttribute="bottom" constant="15" id="d4t-QA-Ct2"/>
                             <constraint firstItem="oD2-ot-LGP" firstAttribute="trailing" secondItem="M9D-qc-H63" secondAttribute="trailing" id="fT4-Z3-NDf"/>
                             <constraint firstItem="fNx-XV-96f" firstAttribute="centerX" secondItem="czb-NE-18X" secondAttribute="centerX" id="jQa-7j-hpW"/>
-                            <constraint firstItem="M9D-qc-H63" firstAttribute="top" secondItem="oD2-ot-LGP" secondAttribute="top" id="nlh-PL-PoH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LM3-tu-FyV"/>
@@ -300,10 +362,10 @@
             </objects>
             <point key="canvasLocation" x="-103" y="-7"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Navigation Controller Novenen-->
         <scene sceneID="q3h-eh-keM">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4ik-D0-GUp" userLabel="Navigation Controller" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4ik-D0-GUp" userLabel="Navigation Controller Novenen" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Novenen" image="list.bullet.clipboard" catalog="system" id="5JV-F6-YYd" userLabel="Novenen"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="XL7-yx-6tM">
@@ -313,7 +375,6 @@
                         <color key="barTintColor" name="AccentColor"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="-10"/>
                         </textAttributes>
                         <textAttributes key="largeTitleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -329,15 +390,20 @@
             </objects>
             <point key="canvasLocation" x="-823.1884057971015" y="714.50892857142856"/>
         </scene>
-        <!--Bibelstelle-->
+        <!--Navigation Controller Bibelstelle-->
         <scene sceneID="F1a-bu-62k">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3W8-c6-mMI" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3W8-c6-mMI" userLabel="Navigation Controller Bibelstelle" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Bibelstelle" image="book.closed" catalog="system" id="s8G-TS-Ujw"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TLB-9o-5cM">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="TLB-9o-5cM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="97.333333333333343"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.25034691008510968" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textShadowColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="-10"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -350,6 +416,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrowshape.turn.up.backward.fill" catalog="system" width="128" height="104"/>
+        <image name="arrowshape.turn.up.forward.fill" catalog="system" width="128" height="104"/>
         <image name="bible" width="1000" height="1128"/>
         <image name="book.closed" catalog="system" width="115" height="128"/>
         <image name="bookmark" catalog="system" width="110" height="128"/>
