@@ -30,11 +30,13 @@ class BibelstelleViewController: UIViewController {
         if segue.identifier == "segueRandomBibelstelle" {
             
             let bibelStelle = BibelStelle()
-            var randomBibelstelle = bibelStelle.getBibelstelle(jsonName: "Einheitsuebersetzung1980")
+            //var randomBibelstelle = bibelStelle.getBibelstelle(jsonName: "Einheitsuebersetzung1980")
+           var kompletteBibel = bibelStelle.getBibelstelle(jsonName: "Einheitsuebersetzung1980")
             
             var selectedBibelstelleVC = SelectedBibelstelleViewController()
             selectedBibelstelleVC = segue.destination as! SelectedBibelstelleViewController
-            selectedBibelstelleVC.randomBibelstelle = randomBibelstelle
+            //selectedBibelstelleVC.randomBibelstelle = randomBibelstelle
+            selectedBibelstelleVC.randomBibelstelle = kompletteBibel
         }
     }
 }

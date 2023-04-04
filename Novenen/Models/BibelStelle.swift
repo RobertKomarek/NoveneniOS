@@ -12,7 +12,7 @@ public struct BibelStelle : Decodable {
     public func getBibelstelle(jsonName:String) -> [BibelStelle] {
         
         var jsonResult:[BibelStelle] = []
-        var bibelStelle:[BibelStelle] = []
+        //var bibelStelle:[BibelStelle] = []
         
         if let path = Bundle.main.path(forResource: jsonName, ofType: "json") {
             do {
@@ -22,11 +22,14 @@ public struct BibelStelle : Decodable {
                 // handle error
             }
         }
+       
         
-        let randomInt = Int.random(in: 0..<jsonResult.count)
+        /*let randomInt = Int.random(in: 0..<jsonResult.count)
         bibelStelle.append(BibelStelle(Buchname: jsonResult[randomInt].Buchname, Buch: jsonResult[randomInt].Buch, Kapitel: jsonResult[randomInt].Kapitel, Kapiteltext: jsonResult[randomInt].Kapiteltext))
         
-        return bibelStelle
+        return bibelStelle*/
+        
+        return jsonResult
     }
 
 }

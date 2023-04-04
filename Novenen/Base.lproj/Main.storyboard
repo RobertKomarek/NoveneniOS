@@ -198,6 +198,9 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="arrowshape.turn.up.backward.fill" catalog="system" title=" Zurück"/>
+                                        <connections>
+                                            <action selector="buttonKapitelZurueck" destination="rZe-il-yO0" eventType="touchUpInside" id="JKH-Sh-q9B"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ulq-0V-5a2" userLabel="Button Vor">
                                         <rect key="frame" x="232" y="0.0" width="182" height="34.333333333333336"/>
@@ -205,6 +208,9 @@
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="arrowshape.turn.up.forward.fill" catalog="system" title=" Vor"/>
+                                        <connections>
+                                            <action selector="buttonKapitelVor" destination="rZe-il-yO0" eventType="touchUpInside" id="y1Y-pu-h32"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

@@ -8,10 +8,31 @@ class SelectedBibelstelleViewController: UIViewController {
     var Buch : String?
     var Kapitel : String?
     var KapitelText : String?
+    var randomInt : Int = 0
     
     @IBOutlet weak var textViewKapiteltext: UITextView!
     @IBOutlet weak var labelKapitel: UILabel!
     @IBOutlet weak var labelBuch: UILabel!
+    
+    @IBAction func buttonKapitelVor() {
+        if randomInt < randomBibelstelle.count {
+            randomInt = randomInt + 1
+            self.navigationItem.title = randomBibelstelle[randomInt].Buchname
+            labelBuch.text = randomBibelstelle[randomInt].Buch
+            labelKapitel.text = randomBibelstelle[randomInt].Kapitel
+            textViewKapiteltext.text = randomBibelstelle[randomInt].Kapiteltext
+        }
+    }
+    
+    @IBAction func buttonKapitelZurueck() {
+        if randomInt > 1 {
+            randomInt = randomInt - 1
+            self.navigationItem.title = randomBibelstelle[randomInt].Buchname
+            labelBuch.text = randomBibelstelle[randomInt].Buch
+            labelKapitel.text = randomBibelstelle[randomInt].Kapitel
+            textViewKapiteltext.text = randomBibelstelle[randomInt].Kapiteltext
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,11 +42,11 @@ class SelectedBibelstelleViewController: UIViewController {
         labelBuch.numberOfLines = 0
         [labelBuch.sizeToFit]
         
-        self.navigationItem.title = randomBibelstelle[0].Buchname
-
-        labelBuch.text = randomBibelstelle[0].Buch
-        labelKapitel.text = randomBibelstelle[0].Kapitel
-        textViewKapiteltext.text = randomBibelstelle[0].Kapiteltext
+        randomInt = Int.random(in: 0..<randomBibelstelle.count)
+        self.navigationItem.title = randomBibelstelle[randomInt].Buchname
+        labelBuch.text = randomBibelstelle[randomInt].Buch
+        labelKapitel.text = randomBibelstelle[randomInt].Kapitel
+        textViewKapiteltext.text = randomBibelstelle[randomInt].Kapiteltext
         
     }
 }
