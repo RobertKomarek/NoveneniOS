@@ -34,8 +34,8 @@ class SelectedNoveneViewController: UIViewController, UIPickerViewDataSource, UI
         [labelTagesueberschrift .sizeToFit]
         labelTagesueberschrift.text = passedNovene[0].Tagesueberschrift
         
-        textViewNovene.layer.cornerRadius = 20.0
-        textViewNovene.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
+        //textViewNovene.layer.cornerRadius = 20.0
+        //textViewNovene.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
     }
     
     override func viewDidAppear(_ animated: Bool) {

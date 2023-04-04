@@ -1,10 +1,3 @@
-//
-//  NovenenViewController.swift
-//  Novenen
-//
-//  Created by Marina Komarek on 27.03.23.
-//
-
 import UIKit
 
 class NovenenViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {

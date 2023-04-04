@@ -22,7 +22,7 @@
                             </imageView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2BI-sR-BaC">
                                 <rect key="frame" x="0.0" y="688" width="414" height="125"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.88853919427126449" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="125" id="qjf-4x-xmW"/>
                                 </constraints>
@@ -32,53 +32,56 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SP7-O3-IvS" userLabel="Label Description">
-                                <rect key="frame" x="10" y="570" width="394" height="33"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.39535178885554634" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="33"/>
-                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                                <size key="shadowOffset" width="0.0" height="0.0"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2FL-Bb-ze2">
-                                <rect key="frame" x="133.33333333333337" y="628" width="147.66666666666663" height="35"/>
-                                <color key="backgroundColor" name="AccentColor"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="hand.tap.fill" catalog="system">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content=" Zur Novene">
-                                            <attributes>
-                                                <font key="NSFont" size="18" name="Helvetica"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="zurNoveneClicked:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nh0-Hg-WYZ"/>
-                                    <segue destination="4ah-wm-Vz5" kind="show" identifier="segueZurNovene" id="o1b-zq-wol"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="D7c-CX-ZgW">
+                                <rect key="frame" x="15" y="550" width="384" height="103"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SP7-O3-IvS" userLabel="Label Description">
+                                        <rect key="frame" x="153.33333333333334" y="0.0" width="77.333333333333343" height="33"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.39535178885554634" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="33"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2FL-Bb-ze2">
+                                        <rect key="frame" x="118.33333333333336" y="68" width="147.66666666666663" height="35"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="hand.tap.fill" catalog="system">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content=" Zur Novene">
+                                                    <attributes>
+                                                        <font key="NSFont" size="18" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="zurNoveneClicked:forEvent:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nh0-Hg-WYZ"/>
+                                            <segue destination="4ah-wm-Vz5" kind="show" identifier="segueZurNovene" id="o1b-zq-wol"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="kmp-0Q-wGi" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="07Q-Q4-tU4"/>
-                            <constraint firstItem="2BI-sR-BaC" firstAttribute="top" secondItem="2FL-Bb-ze2" secondAttribute="bottom" constant="25" id="318-Da-e8S"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2BI-sR-BaC" secondAttribute="trailing" id="8LF-3c-Ljn"/>
-                            <constraint firstItem="2FL-Bb-ze2" firstAttribute="top" secondItem="SP7-O3-IvS" secondAttribute="bottom" constant="25" id="8rz-a9-0lG"/>
-                            <constraint firstItem="SP7-O3-IvS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FJW-ZV-EFe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="D7c-CX-ZgW" secondAttribute="trailing" constant="15" id="8Me-rG-k93"/>
+                            <constraint firstItem="2BI-sR-BaC" firstAttribute="top" secondItem="D7c-CX-ZgW" secondAttribute="bottom" constant="35" id="On5-2H-wgH"/>
+                            <constraint firstItem="D7c-CX-ZgW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="Qfy-Q3-XaM"/>
                             <constraint firstItem="2BI-sR-BaC" firstAttribute="top" secondItem="kmp-0Q-wGi" secondAttribute="bottom" id="S7r-6f-FNC"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SP7-O3-IvS" secondAttribute="trailing" constant="10" id="Tod-nt-Vwm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="2BI-sR-BaC" secondAttribute="bottom" id="W5T-TD-7gw"/>
                             <constraint firstAttribute="trailing" secondItem="kmp-0Q-wGi" secondAttribute="trailing" id="eK6-7p-pNa"/>
-                            <constraint firstItem="SP7-O3-IvS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="fGB-jk-Cxv"/>
-                            <constraint firstItem="2FL-Bb-ze2" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rPx-LF-oxm"/>
                             <constraint firstItem="kmp-0Q-wGi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vZe-Uv-czG"/>
                             <constraint firstItem="2BI-sR-BaC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wg0-JM-aKw"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="N o v e n e n" largeTitleDisplayMode="always" id="K04-Q5-4tX"/>
+                    <navigationItem key="navigationItem" title="N O V E N E N" largeTitleDisplayMode="always" id="K04-Q5-4tX"/>
                     <connections>
                         <outlet property="buttonZurNovene" destination="2FL-Bb-ze2" id="ogM-yr-Jv9"/>
                         <outlet property="imageNovene" destination="kmp-0Q-wGi" id="0DU-7W-kWL"/>
@@ -88,7 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="86.956521739130437" y="714.50892857142856"/>
+            <point key="canvasLocation" x="-193" y="715"/>
         </scene>
         <!--Selected Novene-->
         <scene sceneID="9TL-Ww-bUt">
@@ -107,8 +110,7 @@
                             </textView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ek-gp-vFh">
                                 <rect key="frame" x="0.0" y="688" width="414" height="125"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.79742290168408525" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="125" id="e5O-jH-vHz"/>
                                 </constraints>
@@ -150,7 +152,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KBw-dZ-0Ok" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-846.37681159420299" y="1437.7232142857142"/>
+            <point key="canvasLocation" x="-194" y="1449"/>
+        </scene>
+        <!--Selected Bibelstelle-->
+        <scene sceneID="2c9-dv-J7x">
+            <objects>
+                <viewController id="rZe-il-yO0" userLabel="Selected Bibelstelle" customClass="SelectedBibelstelleViewController" customModule="Novenen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FfQ-bS-sVq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="qe1-b2-RQ9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="TdF-Le-QNm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iX4-JL-M3V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1312" y="1412"/>
         </scene>
         <!--Bibelstelle-->
         <scene sceneID="QoQ-Mg-q36">
@@ -161,13 +179,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="M9D-qc-H63">
-                                <rect key="frame" x="0.0" y="44" width="414" height="694.66666666666663"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="650"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bible" translatesAutoresizingMaskIntoConstraints="NO" id="Mcr-W4-H5U">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="340"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="317.66666666666669"/>
                                     </imageView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kd5-B2-oCY">
-                                        <rect key="frame" x="0.0" y="355" width="414" height="339.66666666666674"/>
+                                        <rect key="frame" x="0.0" y="332.66666666666674" width="414" height="317.33333333333326"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" name="Color"/>
@@ -177,10 +195,18 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNx-XV-96f" userLabel="Button Bibelstelle Ziehen">
-                                <rect key="frame" x="114.33333333333333" y="753.66666666666663" width="185.33333333333337" height="34.333333333333371"/>
+                                <rect key="frame" x="114.33333333333333" y="753" width="185.33333333333337" height="35"/>
                                 <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="6EK-CX-kQP"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="hand.tap.fill" catalog="system" title=" Bibelstelle ziehen"/>
+                                <buttonConfiguration key="configuration" style="plain" image="hand.tap.fill" catalog="system" title=" Bibelstelle ziehen">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="rZe-il-yO0" kind="show" identifier="segueRandomBibelstelle" id="6R0-Ng-NUT"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oD2-ot-LGP"/>
@@ -194,7 +220,7 @@
                             <constraint firstItem="M9D-qc-H63" firstAttribute="top" secondItem="oD2-ot-LGP" secondAttribute="top" id="nlh-PL-PoH"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Bibelstelle" image="book.closed" catalog="system" id="s8G-TS-Ujw"/>
+                    <navigationItem key="navigationItem" id="LM3-tu-FyV"/>
                     <connections>
                         <outlet property="buttonBibelstelleZiehen" destination="fNx-XV-96f" id="tZB-Rf-md1"/>
                         <outlet property="textViewBibelzitat" destination="kd5-B2-oCY" id="Scl-pB-aW5"/>
@@ -202,7 +228,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NOd-cU-8tz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="805.79710144927537" y="715.84821428571422"/>
+            <point key="canvasLocation" x="1312" y="715"/>
         </scene>
         <!--Erinnerung-->
         <scene sceneID="d0r-0e-56z">
@@ -218,7 +244,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HS6-wJ-4vl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1485.5072463768117" y="714.50892857142856"/>
+            <point key="canvasLocation" x="2395.6521739130435" y="714.50892857142856"/>
         </scene>
         <!--Lesezeichen-->
         <scene sceneID="fTm-e5-FTi">
@@ -234,7 +260,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kbc-IV-ICl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2179.7101449275365" y="714.50892857142856"/>
+            <point key="canvasLocation" x="3089.8550724637685" y="714.50892857142856"/>
         </scene>
         <!--Impressum-->
         <scene sceneID="Gp2-Be-hmc">
@@ -250,7 +276,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zDZ-Sq-vUl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2863.768115942029" y="714.50892857142856"/>
+            <point key="canvasLocation" x="3772.4637681159425" y="714.50892857142856"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="dPk-Nl-2mL">
@@ -264,7 +290,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="4ik-D0-GUp" kind="relationship" relationship="viewControllers" id="IpW-f2-mrd"/>
-                        <segue destination="3S0-iK-9Uy" kind="relationship" relationship="viewControllers" id="jk0-7F-Y7g"/>
+                        <segue destination="3W8-c6-mMI" kind="relationship" relationship="viewControllers" id="jk0-7F-Y7g"/>
                         <segue destination="48D-Tq-NEy" kind="relationship" relationship="viewControllers" id="Cka-NX-Nfg"/>
                         <segue destination="PWT-ef-R9j" kind="relationship" relationship="viewControllers" id="fHC-w0-SxQ"/>
                         <segue destination="mM6-Xc-Tia" kind="relationship" relationship="viewControllers" id="uDy-0U-nze"/>
@@ -283,7 +309,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="XL7-yx-6tM">
                         <rect key="frame" x="0.0" y="44" width="414" height="97.333333333333343"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="1" alpha="0.14706663422237168" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" name="AccentColor"/>
                         <textAttributes key="titleTextAttributes">
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -303,8 +329,26 @@
             </objects>
             <point key="canvasLocation" x="-823.1884057971015" y="714.50892857142856"/>
         </scene>
+        <!--Bibelstelle-->
+        <scene sceneID="F1a-bu-62k">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3W8-c6-mMI" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Bibelstelle" image="book.closed" catalog="system" id="s8G-TS-Ujw"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="TLB-9o-5cM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3S0-iK-9Uy" kind="relationship" relationship="rootViewController" id="HfO-oJ-1mf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xAH-x6-Rvf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="596" y="715"/>
+        </scene>
     </scenes>
-    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="bible" width="1000" height="1128"/>
         <image name="book.closed" catalog="system" width="115" height="128"/>
