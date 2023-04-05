@@ -13,8 +13,10 @@ class SelectedBibelstelleViewController: UIViewController {
     @IBOutlet weak var textViewKapiteltext: UITextView!
     @IBOutlet weak var labelKapitel: UILabel!
     @IBOutlet weak var labelBuch: UILabel!
+    @IBOutlet weak var buttonKapitelVor: UIButton!
+    @IBOutlet weak var buttonKapitelZurueck: UIButton!
     
-    @IBAction func buttonKapitelVor() {
+    @IBAction func buttonKapitelVorClicked() {
         if randomInt < randomBibelstelle.count {
             randomInt = randomInt + 1
             self.navigationItem.title = randomBibelstelle[randomInt].Buchname
@@ -24,7 +26,7 @@ class SelectedBibelstelleViewController: UIViewController {
         }
     }
     
-    @IBAction func buttonKapitelZurueck() {
+    @IBAction func buttonKapitelZurueckClicked() {
         if randomInt > 1 {
             randomInt = randomInt - 1
             self.navigationItem.title = randomBibelstelle[randomInt].Buchname
@@ -41,6 +43,9 @@ class SelectedBibelstelleViewController: UIViewController {
         [labelKapitel.sizeToFit]
         labelBuch.numberOfLines = 0
         [labelBuch.sizeToFit]
+        
+        buttonKapitelVor.layer.cornerRadius = 10
+        buttonKapitelZurueck.layer.cornerRadius = 10
         
         randomInt = Int.random(in: 0..<randomBibelstelle.count)
         self.navigationItem.title = randomBibelstelle[randomInt].Buchname
