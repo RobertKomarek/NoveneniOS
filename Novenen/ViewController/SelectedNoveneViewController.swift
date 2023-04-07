@@ -26,8 +26,8 @@ class SelectedNoveneViewController: UIViewController, UIPickerViewDataSource, UI
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         
-        self.navigationItem.title = passedNovene[0].NovenenName
-        textViewNovene.text = passedNovene[0].Text
+        self.navigationItem.title = passedNovene[0].Novenenname
+        textViewNovene.text = passedNovene[0].Tagestext
         
         //Autoheight for label
         labelTagesueberschrift.numberOfLines = 0
@@ -59,7 +59,7 @@ class SelectedNoveneViewController: UIViewController, UIPickerViewDataSource, UI
         labelTagesueberschrift.numberOfLines = 0
         labelTagesueberschrift.text = passedNovene[row].Tagesueberschrift
         [labelTagesueberschrift .sizeToFit]
-        textViewNovene.text = passedNovene[row].Text
+        textViewNovene.text = passedNovene[row].Tagestext
          }
 
 }

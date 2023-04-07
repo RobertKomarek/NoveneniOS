@@ -72,16 +72,30 @@ class NovenenViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         if segue.identifier == "segueZurNovene" {
             var selectedNoveneVC = SelectedNoveneViewController()
             selectedNoveneVC = segue.destination as! SelectedNoveneViewController
-            
-            var novene = Novene()
-            switch selectedNovene {
-            case "GöttlicheBarmherzigkeit":
-                selectedNoveneVC.passedNovene = novene.GoettlicheBarmherzigkeitsNovene()
-            default:
-                selectedNoveneVC.passedNovene = novene.GoettlicheBarmherzigkeitsNovene()
-            }
-            //selectedNoveneVC.passedNovene = test
+            selectedNoveneVC.passedNovene = getNovene(novenenName: selectedNovene)
         }
+    }
+    
+    public func getNovene(novenenName:String) -> [Novene] {
+        var novenen: [Novene] = []
+        var selectedNovene: [Novene] = []
+        
+        if let path = Bundle.main.path(forResource: "Novenen", ofType: "json") {
+            do {
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                novenen = try! JSONDecoder().decode([Novene].self, from: data)
+            } catch {
+                // handle error
+            }
+        }
+      
+        for novene in novenen {
+            if novene.Novenenname == novenenName {
+                selectedNovene.append(novene)
+            }
+        }
+        
+        return selectedNovene
     }
 
 }
