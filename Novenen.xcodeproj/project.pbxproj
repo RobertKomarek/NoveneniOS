@@ -15,7 +15,6 @@
 		843B166729D73446009B1765 /* SelectedNoveneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B166629D73446009B1765 /* SelectedNoveneViewController.swift */; };
 		8499CC8D29D1CF52008F7078 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8499CC8C29D1CF52008F7078 /* AppDelegate.swift */; };
 		8499CC8F29D1CF52008F7078 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8499CC8E29D1CF52008F7078 /* SceneDelegate.swift */; };
-		8499CC9129D1CF52008F7078 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8499CC9029D1CF52008F7078 /* ViewController.swift */; };
 		8499CC9429D1CF52008F7078 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8499CC9229D1CF52008F7078 /* Main.storyboard */; };
 		8499CC9629D1CF53008F7078 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8499CC9529D1CF53008F7078 /* Assets.xcassets */; };
 		8499CCA429D1CF54008F7078 /* NovenenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8499CCA329D1CF54008F7078 /* NovenenTests.swift */; };
@@ -25,7 +24,7 @@
 		8499CCC029D1D627008F7078 /* BibelstelleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8499CCBF29D1D627008F7078 /* BibelstelleViewController.swift */; };
 		8499CCC229D1D638008F7078 /* LesezeichenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8499CCC129D1D638008F7078 /* LesezeichenViewController.swift */; };
 		8499CCC429D1D645008F7078 /* ImpressumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8499CCC329D1D645008F7078 /* ImpressumViewController.swift */; };
-		84C69F3B29E004380047F197 /* Novenen.json in Resources */ = {isa = PBXBuildFile; fileRef = 84C69F3A29E004380047F197 /* Novenen.json */; };
+		84BE14A129E1C68A008BB1B4 /* Novenen.json in Resources */ = {isa = PBXBuildFile; fileRef = 84BE14A029E1C68A008BB1B4 /* Novenen.json */; };
 		84FD3B0629D761BA00130079 /* Novene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FD3B0529D761BA00130079 /* Novene.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,7 +54,6 @@
 		8499CC8929D1CF52008F7078 /* Novenen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Novenen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8499CC8C29D1CF52008F7078 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8499CC8E29D1CF52008F7078 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8499CC9029D1CF52008F7078 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8499CC9329D1CF52008F7078 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8499CC9529D1CF53008F7078 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8499CC9A29D1CF53008F7078 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -68,7 +66,7 @@
 		8499CCBF29D1D627008F7078 /* BibelstelleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibelstelleViewController.swift; sourceTree = "<group>"; };
 		8499CCC129D1D638008F7078 /* LesezeichenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LesezeichenViewController.swift; sourceTree = "<group>"; };
 		8499CCC329D1D645008F7078 /* ImpressumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpressumViewController.swift; sourceTree = "<group>"; };
-		84C69F3A29E004380047F197 /* Novenen.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Novenen.json; sourceTree = "<group>"; };
+		84BE14A029E1C68A008BB1B4 /* Novenen.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Novenen.json; sourceTree = "<group>"; };
 		84FD3B0529D761BA00130079 /* Novene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Novene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,7 +119,7 @@
 		8499CC8B29D1CF52008F7078 /* Novenen */ = {
 			isa = PBXGroup;
 			children = (
-				84C69F3A29E004380047F197 /* Novenen.json */,
+				84BE14A029E1C68A008BB1B4 /* Novenen.json */,
 				841227B529D9C8F9000C5645 /* Einheitsuebersetzung1980.json */,
 				84FD3B0029D75CDD00130079 /* Models */,
 				8499CCBC29D1D447008F7078 /* ViewController */,
@@ -155,7 +153,6 @@
 		8499CCBC29D1D447008F7078 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				8499CC9029D1CF52008F7078 /* ViewController.swift */,
 				8499CCBD29D1D472008F7078 /* NovenenViewController.swift */,
 				8499CCBF29D1D627008F7078 /* BibelstelleViewController.swift */,
 				8499CCC129D1D638008F7078 /* LesezeichenViewController.swift */,
@@ -287,7 +284,7 @@
 			files = (
 				8499CC9629D1CF53008F7078 /* Assets.xcassets in Resources */,
 				8499CC9429D1CF52008F7078 /* Main.storyboard in Resources */,
-				84C69F3B29E004380047F197 /* Novenen.json in Resources */,
+				84BE14A129E1C68A008BB1B4 /* Novenen.json in Resources */,
 				843B166329D72F01009B1765 /* Launch Screen.storyboard in Resources */,
 				841227B629D9C8F9000C5645 /* Einheitsuebersetzung1980.json in Resources */,
 			);
@@ -315,7 +312,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				843B166729D73446009B1765 /* SelectedNoveneViewController.swift in Sources */,
-				8499CC9129D1CF52008F7078 /* ViewController.swift in Sources */,
 				8499CC8D29D1CF52008F7078 /* AppDelegate.swift in Sources */,
 				8499CCC429D1D645008F7078 /* ImpressumViewController.swift in Sources */,
 				8499CCC229D1D638008F7078 /* LesezeichenViewController.swift in Sources */,
