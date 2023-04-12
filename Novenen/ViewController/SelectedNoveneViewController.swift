@@ -29,15 +29,10 @@ class SelectedNoveneViewController: UIViewController, UIPickerViewDataSource, UI
         
         //Add new lines so appearing button doesn't overlap text
         textViewNovene.text = passedNovene[0].Tagestext! + "\n\n"
+        
         buttonGoToLitanei.setTitle(passedNovene[selectedRow].Litaneiueberschrift, for: .normal)
         buttonGoToLitanei.layer.cornerRadius = 10.0
-        
-        //Show Button when TextView doesn't require to scroll
-        if (self.textViewNovene.contentSize.height <= self.textViewNovene.frame.size.height) {
-            buttonGoToLitanei.isHidden = false
-        } else {
-            buttonGoToLitanei.isHidden = true
-        }
+        buttonGoToLitanei.isHidden = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -69,8 +64,9 @@ class SelectedNoveneViewController: UIViewController, UIPickerViewDataSource, UI
         
         buttonGoToLitanei.setTitle(passedNovene[row].Litaneiueberschrift, for: .normal)
         print (row)
+        
         //Show Button when TextView doesn't require to scroll
-        if (self.textViewNovene.contentSize.height <= self.textViewNovene.frame.size.height) {
+        if (self.textViewNovene.contentSize.height <= self.textViewNovene.frame.size.height && row != 0 && passedNovene[1].Litanei?.isEmpty == false) {
             buttonGoToLitanei.isHidden = false
         } else {
             buttonGoToLitanei.isHidden = true
@@ -81,7 +77,7 @@ class SelectedNoveneViewController: UIViewController, UIPickerViewDataSource, UI
     //check if textview scrolled to end/bottom
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         
-        if (scrollView.contentOffset.y >= scrollView.contentSize.height - (scrollView.frame.size.height + 50) && selectedRow != 0) {
+        if (scrollView.contentOffset.y >= scrollView.contentSize.height - (scrollView.frame.size.height + 50) && selectedRow != 0 && passedNovene[1].Litanei?.isEmpty == false) {
             buttonGoToLitanei.isHidden = false
         } else {
             buttonGoToLitanei.isHidden = true
