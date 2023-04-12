@@ -3,7 +3,7 @@ import UIKit
 class SelectedNoveneViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UIScrollViewDelegate, UITextViewDelegate {
     
     var passedNovene: [Novene] = []
-    var selectedRow : Int?
+    var selectedRow : Int = 0
 
     @IBOutlet weak var textViewNovene: UITextView!
     @IBOutlet weak var pickerViewTage: UIPickerView!
@@ -25,15 +25,24 @@ class SelectedNoveneViewController: UIViewController, UIPickerViewDataSource, UI
         
         labelTagesueberschrift.numberOfLines = 0
         labelTagesueberschrift.sizeToFit()
-        //[labelTagesueberschrift .sizeToFit]
         labelTagesueberschrift.text = passedNovene[0].Tagesueberschrift
         
-        textViewNovene.text = passedNovene[0].Tagestext
-        //textViewNovene.layer.cornerRadius = 20.0
-        //textViewNovene.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
-        
-        buttonGoToLitanei.isHidden = true
+        //Add new lines so appearing button doesn't overlap text
+        textViewNovene.text = passedNovene[0].Tagestext! + "\n\n"
+        buttonGoToLitanei.setTitle(passedNovene[selectedRow].Litaneiueberschrift, for: .normal)
         buttonGoToLitanei.layer.cornerRadius = 10.0
+        
+        //Show Button when TextView doesn't require to scroll
+        if (self.textViewNovene.contentSize.height <= self.textViewNovene.frame.size.height) {
+            buttonGoToLitanei.isHidden = false
+        } else {
+            buttonGoToLitanei.isHidden = true
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        //Change text of Back Button
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: passedNovene[0].Novenenname, style: UIBarButtonItem.Style.plain, target: nil, action: nil)
     }
     
 
@@ -51,23 +60,42 @@ class SelectedNoveneViewController: UIViewController, UIPickerViewDataSource, UI
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selectedRow = row
         //Autoadjust height of label
         labelTagesueberschrift.text = passedNovene[row].Tagesueberschrift
         labelTagesueberschrift.numberOfLines = 0
-        [labelTagesueberschrift .sizeToFit]
-        textViewNovene.text = passedNovene[row].Tagestext
+        labelTagesueberschrift.sizeToFit()
+        textViewNovene.text = passedNovene[row].Tagestext! + "\n\n"
         
-        buttonGoToLitanei.isHidden = true
+        buttonGoToLitanei.setTitle(passedNovene[row].Litaneiueberschrift, for: .normal)
+        print (row)
+        //Show Button when TextView doesn't require to scroll
+        if (self.textViewNovene.contentSize.height <= self.textViewNovene.frame.size.height) {
+            buttonGoToLitanei.isHidden = false
+        } else {
+            buttonGoToLitanei.isHidden = true
+        }
      }
         
   
     //check if textview scrolled to end/bottom
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if (scrollView.contentOffset.y >= scrollView.contentSize.height - (scrollView.frame.size.height + 10) && selectedRow != 0) {
+        
+        if (scrollView.contentOffset.y >= scrollView.contentSize.height - (scrollView.frame.size.height + 50) && selectedRow != 0) {
             buttonGoToLitanei.isHidden = false
         } else {
             buttonGoToLitanei.isHidden = true
         }
     }
-
+    
+    //Navigate to LitaneiViewController
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "segueZurLitanei" {
+                var litaneiVC = LitaneiViewController()
+                litaneiVC = segue.destination as! LitaneiViewController
+                litaneiVC.litanei = passedNovene[selectedRow].Litanei
+                litaneiVC.litaneiUeberschrift = passedNovene[selectedRow].Litaneiueberschrift
+        }
+    }
+      
 }

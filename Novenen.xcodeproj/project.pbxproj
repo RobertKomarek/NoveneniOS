@@ -24,7 +24,8 @@
 		8499CCC029D1D627008F7078 /* BibelstelleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8499CCBF29D1D627008F7078 /* BibelstelleViewController.swift */; };
 		8499CCC229D1D638008F7078 /* LesezeichenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8499CCC129D1D638008F7078 /* LesezeichenViewController.swift */; };
 		8499CCC429D1D645008F7078 /* ImpressumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8499CCC329D1D645008F7078 /* ImpressumViewController.swift */; };
-		84BE14A129E1C68A008BB1B4 /* Novenen.json in Resources */ = {isa = PBXBuildFile; fileRef = 84BE14A029E1C68A008BB1B4 /* Novenen.json */; };
+		84FC7D7929E6982800218F90 /* LitaneiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FC7D7829E6982800218F90 /* LitaneiViewController.swift */; };
+		84FC7D7D29E6BBF500218F90 /* Novenen.json in Resources */ = {isa = PBXBuildFile; fileRef = 84FC7D7C29E6BBF500218F90 /* Novenen.json */; };
 		84FD3B0629D761BA00130079 /* Novene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FD3B0529D761BA00130079 /* Novene.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,7 +67,8 @@
 		8499CCBF29D1D627008F7078 /* BibelstelleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibelstelleViewController.swift; sourceTree = "<group>"; };
 		8499CCC129D1D638008F7078 /* LesezeichenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LesezeichenViewController.swift; sourceTree = "<group>"; };
 		8499CCC329D1D645008F7078 /* ImpressumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpressumViewController.swift; sourceTree = "<group>"; };
-		84BE14A029E1C68A008BB1B4 /* Novenen.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Novenen.json; sourceTree = "<group>"; };
+		84FC7D7829E6982800218F90 /* LitaneiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LitaneiViewController.swift; sourceTree = "<group>"; };
+		84FC7D7C29E6BBF500218F90 /* Novenen.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Novenen.json; sourceTree = "<group>"; };
 		84FD3B0529D761BA00130079 /* Novene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Novene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,8 +121,8 @@
 		8499CC8B29D1CF52008F7078 /* Novenen */ = {
 			isa = PBXGroup;
 			children = (
-				84BE14A029E1C68A008BB1B4 /* Novenen.json */,
 				841227B529D9C8F9000C5645 /* Einheitsuebersetzung1980.json */,
+				84FC7D7C29E6BBF500218F90 /* Novenen.json */,
 				84FD3B0029D75CDD00130079 /* Models */,
 				8499CCBC29D1D447008F7078 /* ViewController */,
 				8499CC8C29D1CF52008F7078 /* AppDelegate.swift */,
@@ -159,6 +161,7 @@
 				8499CCC329D1D645008F7078 /* ImpressumViewController.swift */,
 				843B166629D73446009B1765 /* SelectedNoveneViewController.swift */,
 				8415CCDA29DC28C70066860E /* SelectedBibelstelleViewController.swift */,
+				84FC7D7829E6982800218F90 /* LitaneiViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -284,7 +287,7 @@
 			files = (
 				8499CC9629D1CF53008F7078 /* Assets.xcassets in Resources */,
 				8499CC9429D1CF52008F7078 /* Main.storyboard in Resources */,
-				84BE14A129E1C68A008BB1B4 /* Novenen.json in Resources */,
+				84FC7D7D29E6BBF500218F90 /* Novenen.json in Resources */,
 				843B166329D72F01009B1765 /* Launch Screen.storyboard in Resources */,
 				841227B629D9C8F9000C5645 /* Einheitsuebersetzung1980.json in Resources */,
 			);
@@ -321,6 +324,7 @@
 				841227B429D9C8CB000C5645 /* BibelStelle.swift in Sources */,
 				8499CCC029D1D627008F7078 /* BibelstelleViewController.swift in Sources */,
 				8499CC8F29D1CF52008F7078 /* SceneDelegate.swift in Sources */,
+				84FC7D7929E6982800218F90 /* LitaneiViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

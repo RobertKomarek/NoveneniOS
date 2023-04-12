@@ -97,18 +97,18 @@
             <objects>
                 <viewController id="4ah-wm-Vz5" userLabel="Selected Novene" customClass="SelectedNoveneViewController" customModule="Novenen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uav-lO-v5q">
-                        <rect key="frame" x="0.0" y="0.0" width="343" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JX2-R6-tkS">
-                                <rect key="frame" x="5" y="156.33333333333334" width="333" height="32.333333333333343"/>
+                                <rect key="frame" x="5" y="156.33333333333334" width="404" height="32.333333333333343"/>
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                 <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dUW-e2-EuR" userLabel="Text View Novenentext">
-                                <rect key="frame" x="0.0" y="203.66666666666666" width="343" height="484.33333333333337"/>
+                                <rect key="frame" x="0.0" y="203.66666666666666" width="414" height="484.33333333333337"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor"/>
@@ -116,7 +116,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ek-gp-vFh">
-                                <rect key="frame" x="0.0" y="688" width="343" height="125"/>
+                                <rect key="frame" x="0.0" y="688" width="414" height="125"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="125" id="e5O-jH-vHz"/>
@@ -128,34 +128,35 @@
                                 </userDefinedRuntimeAttributes>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QC1-Qf-E5t">
-                                <rect key="frame" x="194.33333333333337" y="188.66666666666666" width="133.66666666666663" height="34.333333333333343"/>
+                                <rect key="frame" x="265.66666666666669" y="648.66666666666663" width="133.33333333333331" height="34.333333333333371"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="hand.tap.fill" catalog="system" title=" Zur Litanei"/>
+                                <connections>
+                                    <segue destination="Jfe-WS-Rlh" kind="show" identifier="segueZurLitanei" id="Cyt-Wq-XBo"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kl8-oY-OzJ"/>
                         <color key="backgroundColor" name="parchment_paper"/>
                         <constraints>
-                            <constraint firstItem="kl8-oY-OzJ" firstAttribute="trailing" secondItem="QC1-Qf-E5t" secondAttribute="trailing" constant="15" id="2vQ-pS-Wd0"/>
                             <constraint firstItem="1ek-gp-vFh" firstAttribute="leading" secondItem="kl8-oY-OzJ" secondAttribute="leading" id="32F-Fe-TnD"/>
                             <constraint firstItem="dUW-e2-EuR" firstAttribute="leading" secondItem="kl8-oY-OzJ" secondAttribute="leading" id="8IN-WV-N1v"/>
+                            <constraint firstItem="1ek-gp-vFh" firstAttribute="top" secondItem="QC1-Qf-E5t" secondAttribute="bottom" constant="5" id="B7D-kp-zSx"/>
                             <constraint firstItem="JX2-R6-tkS" firstAttribute="leading" secondItem="kl8-oY-OzJ" secondAttribute="leading" constant="5" id="BCT-xj-9YC"/>
-                            <constraint firstItem="QC1-Qf-E5t" firstAttribute="top" secondItem="JX2-R6-tkS" secondAttribute="bottom" id="CbF-8Q-n0Y"/>
                             <constraint firstItem="1ek-gp-vFh" firstAttribute="bottom" secondItem="kl8-oY-OzJ" secondAttribute="bottom" id="KWK-UU-h8r"/>
-                            <constraint firstItem="kl8-oY-OzJ" firstAttribute="trailing" secondItem="QC1-Qf-E5t" secondAttribute="trailing" constant="15" id="Kmy-aA-ddc"/>
                             <constraint firstItem="JX2-R6-tkS" firstAttribute="top" secondItem="kl8-oY-OzJ" secondAttribute="top" constant="15" id="PV1-ku-nX6"/>
                             <constraint firstItem="JX2-R6-tkS" firstAttribute="centerX" secondItem="Uav-lO-v5q" secondAttribute="centerX" id="RsT-ql-tJd"/>
-                            <constraint firstItem="1ek-gp-vFh" firstAttribute="top" secondItem="dUW-e2-EuR" secondAttribute="bottom" id="TRF-bi-B5O"/>
                             <constraint firstItem="dUW-e2-EuR" firstAttribute="top" secondItem="JX2-R6-tkS" secondAttribute="bottom" constant="15" id="bP9-QG-Qz9"/>
                             <constraint firstItem="dUW-e2-EuR" firstAttribute="trailing" secondItem="kl8-oY-OzJ" secondAttribute="trailing" id="bjZ-3K-vtY"/>
                             <constraint firstItem="kl8-oY-OzJ" firstAttribute="trailing" secondItem="JX2-R6-tkS" secondAttribute="trailing" constant="5" id="gWz-Hf-N5u"/>
+                            <constraint firstItem="1ek-gp-vFh" firstAttribute="top" secondItem="dUW-e2-EuR" secondAttribute="bottom" id="ivE-Wg-qRv"/>
+                            <constraint firstItem="kl8-oY-OzJ" firstAttribute="trailing" secondItem="QC1-Qf-E5t" secondAttribute="trailing" constant="15" id="kIN-oR-yj8"/>
                             <constraint firstItem="kl8-oY-OzJ" firstAttribute="trailing" secondItem="1ek-gp-vFh" secondAttribute="trailing" id="ks7-MB-fAD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" style="browser" id="tMf-9R-oke"/>
-                    <size key="freeformSize" width="343" height="896"/>
                     <connections>
                         <outlet property="buttonGoToLitanei" destination="QC1-Qf-E5t" id="IAO-v3-fbO"/>
                         <outlet property="labelTagesueberschrift" destination="JX2-R6-tkS" id="Stm-HP-Nym"/>
@@ -165,7 +166,42 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KBw-dZ-0Ok" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-139.85507246376812" y="1445.7589285714284"/>
+            <point key="canvasLocation" x="-139.13043478260872" y="1411.6071428571429"/>
+        </scene>
+        <!--Litanei View Controller-->
+        <scene sceneID="duH-iF-kQi">
+            <objects>
+                <viewController id="Jfe-WS-Rlh" customClass="LitaneiViewController" customModule="Novenen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RnM-mD-YeI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="b39-PJ-f2H">
+                                <rect key="frame" x="5" y="156.33333333333331" width="404" height="651.66666666666674"/>
+                                <color key="backgroundColor" name="parchment_paper"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ofH-dp-9em"/>
+                        <color key="backgroundColor" name="parchment_paper"/>
+                        <constraints>
+                            <constraint firstItem="ofH-dp-9em" firstAttribute="bottom" secondItem="b39-PJ-f2H" secondAttribute="bottom" constant="5" id="2P8-hP-tjM"/>
+                            <constraint firstItem="b39-PJ-f2H" firstAttribute="top" secondItem="ofH-dp-9em" secondAttribute="top" constant="15" id="AxE-Zj-aca"/>
+                            <constraint firstItem="b39-PJ-f2H" firstAttribute="leading" secondItem="ofH-dp-9em" secondAttribute="leading" constant="5" id="bqM-Zs-Rdl"/>
+                            <constraint firstItem="ofH-dp-9em" firstAttribute="trailing" secondItem="b39-PJ-f2H" secondAttribute="trailing" constant="5" id="qjQ-7W-bjW"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ket-Jb-vjR"/>
+                    <connections>
+                        <outlet property="textViewLitanei" destination="b39-PJ-f2H" id="qwh-aH-go7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jfu-gj-saq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-139.13043478260872" y="2092.6339285714284"/>
         </scene>
         <!--Selected Bibelstelle-->
         <scene sceneID="2c9-dv-J7x">
