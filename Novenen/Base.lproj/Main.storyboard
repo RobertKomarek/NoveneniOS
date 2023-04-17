@@ -181,7 +181,7 @@
                                 <color key="backgroundColor" name="parchment_paper"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="28"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -354,18 +354,71 @@
         <!--Erinnerung-->
         <scene sceneID="d0r-0e-56z">
             <objects>
-                <viewController id="48D-Tq-NEy" userLabel="Erinnerung" sceneMemberID="viewController">
+                <viewController id="48D-Tq-NEy" userLabel="Erinnerung" customClass="ErinnerungViewController" customModule="Novenen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dvg-If-dEM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calender" translatesAutoresizingMaskIntoConstraints="NO" id="dk7-JU-fHD" userLabel="image calender">
+                                <rect key="frame" x="0.0" y="59" width="414" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="llm-A1-0M7"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUW-5v-KBz" userLabel="Label Datum">
+                                <rect key="frame" x="5" y="174" width="404" height="102"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" verticalHuggingPriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="Z3H-Qd-gMU">
+                                <rect key="frame" x="0.0" y="291" width="414" height="216"/>
+                            </pickerView>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="5PD-ZB-qce">
+                                <rect key="frame" x="0.0" y="522" width="414" height="216"/>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tQo-eP-SUA" userLabel="Button Bestätigen">
+                                <rect key="frame" x="97.000000000000014" y="753" width="220.33333333333337" height="35"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="PGX-tQ-A3T"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="hand.tap.fill" catalog="system" title=" Erinnerung bestätigen"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="S2j-Oj-OF2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dk7-JU-fHD" firstAttribute="top" secondItem="S2j-Oj-OF2" secondAttribute="top" constant="15" id="0sP-hz-nQp"/>
+                            <constraint firstItem="dk7-JU-fHD" firstAttribute="leading" secondItem="dvg-If-dEM" secondAttribute="leading" id="8Bd-Jb-PfQ"/>
+                            <constraint firstAttribute="trailing" secondItem="dk7-JU-fHD" secondAttribute="trailing" id="Aex-uZ-bOg"/>
+                            <constraint firstItem="S2j-Oj-OF2" firstAttribute="bottom" secondItem="tQo-eP-SUA" secondAttribute="bottom" constant="25" id="Cls-sB-eCW"/>
+                            <constraint firstItem="S2j-Oj-OF2" firstAttribute="trailing" secondItem="HUW-5v-KBz" secondAttribute="trailing" constant="5" id="FBD-VL-i0r"/>
+                            <constraint firstItem="HUW-5v-KBz" firstAttribute="leading" secondItem="S2j-Oj-OF2" secondAttribute="leading" constant="5" id="I9N-Pl-Y2w"/>
+                            <constraint firstItem="5PD-ZB-qce" firstAttribute="top" secondItem="Z3H-Qd-gMU" secondAttribute="bottom" constant="15" id="NaQ-z8-DGZ"/>
+                            <constraint firstItem="5PD-ZB-qce" firstAttribute="leading" secondItem="S2j-Oj-OF2" secondAttribute="leading" id="OhI-Qa-7gw"/>
+                            <constraint firstItem="tQo-eP-SUA" firstAttribute="top" secondItem="5PD-ZB-qce" secondAttribute="bottom" constant="15" id="U42-iF-isJ"/>
+                            <constraint firstItem="Z3H-Qd-gMU" firstAttribute="leading" secondItem="S2j-Oj-OF2" secondAttribute="leading" id="VDW-W2-y6M"/>
+                            <constraint firstItem="tQo-eP-SUA" firstAttribute="centerX" secondItem="dvg-If-dEM" secondAttribute="centerX" id="Zmh-Vs-ESB"/>
+                            <constraint firstItem="5PD-ZB-qce" firstAttribute="trailing" secondItem="S2j-Oj-OF2" secondAttribute="trailing" id="auc-fS-AAU"/>
+                            <constraint firstItem="Z3H-Qd-gMU" firstAttribute="trailing" secondItem="S2j-Oj-OF2" secondAttribute="trailing" id="hyQ-92-EPz"/>
+                            <constraint firstItem="dk7-JU-fHD" firstAttribute="centerX" secondItem="dvg-If-dEM" secondAttribute="centerX" id="ih2-tr-28w"/>
+                            <constraint firstItem="Z3H-Qd-gMU" firstAttribute="top" secondItem="HUW-5v-KBz" secondAttribute="bottom" constant="15" id="kCo-KU-sdN"/>
+                            <constraint firstItem="HUW-5v-KBz" firstAttribute="top" secondItem="dk7-JU-fHD" secondAttribute="bottom" constant="15" id="qQo-KP-AZ4"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Erinnerung" image="calendar" catalog="system" id="oJg-cV-CbP"/>
+                    <connections>
+                        <outlet property="buttonErinnerungBestaetigen" destination="tQo-eP-SUA" id="KJg-26-QnY"/>
+                        <outlet property="labelDatumNovene" destination="HUW-5v-KBz" id="YOm-5U-zqB"/>
+                        <outlet property="pickerNovenen" destination="Z3H-Qd-gMU" id="agr-o4-Siw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HS6-wJ-4vl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2395.6521739130435" y="714.50892857142856"/>
+            <point key="canvasLocation" x="2394.202898550725" y="714.50892857142856"/>
         </scene>
         <!--Lesezeichen-->
         <scene sceneID="fTm-e5-FTi">
@@ -481,6 +534,7 @@
         <image name="book.closed" catalog="system" width="115" height="128"/>
         <image name="bookmark" catalog="system" width="110" height="128"/>
         <image name="calendar" catalog="system" width="128" height="107"/>
+        <image name="calender" width="512" height="512"/>
         <image name="hand.tap.fill" catalog="system" width="115" height="128"/>
         <image name="info.square" catalog="system" width="128" height="114"/>
         <image name="list.bullet.clipboard" catalog="system" width="103" height="128"/>
