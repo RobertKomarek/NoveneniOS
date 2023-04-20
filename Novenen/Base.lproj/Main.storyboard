@@ -212,7 +212,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mTl-Qi-Xsf" userLabel="Stack View Text">
-                                <rect key="frame" x="0.0" y="141.33333333333331" width="414" height="587.33333333333348"/>
+                                <rect key="frame" x="0.0" y="141.33333333333331" width="414" height="588.66666666666674"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLk-V4-fy6">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="33"/>
@@ -227,7 +227,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="isO-k5-o2X">
-                                        <rect key="frame" x="0.0" y="85.999999999999972" width="414" height="501.33333333333326"/>
+                                        <rect key="frame" x="0.0" y="86.000000000000028" width="414" height="502.66666666666674"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -252,7 +252,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ulq-0V-5a2" userLabel="Button Vor">
-                                <rect key="frame" x="269" y="743.66666666666663" width="120" height="34.333333333333371"/>
+                                <rect key="frame" x="269" y="745" width="120" height="33"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="T5y-1y-jPv"/>
@@ -299,14 +299,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="M9D-qc-H63">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="738"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="M9D-qc-H63">
+                                <rect key="frame" x="0.0" y="55" width="414" height="683"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bible" translatesAutoresizingMaskIntoConstraints="NO" id="Mcr-W4-H5U">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="361.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="341"/>
                                     </imageView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kd5-B2-oCY">
-                                        <rect key="frame" x="0.0" y="376.66666666666674" width="414" height="361.33333333333326"/>
+                                        <rect key="frame" x="0.0" y="342" width="414" height="341"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" name="Color"/>
@@ -333,7 +333,7 @@
                         <viewLayoutGuide key="safeArea" id="oD2-ot-LGP"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="M9D-qc-H63" firstAttribute="top" secondItem="czb-NE-18X" secondAttribute="top" id="KKB-Tg-MqY"/>
+                            <constraint firstItem="M9D-qc-H63" firstAttribute="top" secondItem="czb-NE-18X" secondAttribute="top" constant="55" id="MF8-jE-13l"/>
                             <constraint firstItem="oD2-ot-LGP" firstAttribute="bottom" secondItem="fNx-XV-96f" secondAttribute="bottom" constant="25" id="WIF-Xc-jbZ"/>
                             <constraint firstItem="M9D-qc-H63" firstAttribute="leading" secondItem="oD2-ot-LGP" secondAttribute="leading" id="ZgG-IB-mPG"/>
                             <constraint firstItem="fNx-XV-96f" firstAttribute="top" secondItem="M9D-qc-H63" secondAttribute="bottom" constant="15" id="d4t-QA-Ct2"/>
@@ -349,7 +349,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NOd-cU-8tz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1312" y="715"/>
+            <point key="canvasLocation" x="1311.5942028985507" y="714.50892857142856"/>
         </scene>
         <!--Erinnerung-->
         <scene sceneID="d0r-0e-56z">
@@ -373,6 +373,9 @@
                             </label>
                             <pickerView contentMode="scaleToFill" verticalHuggingPriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="Z3H-Qd-gMU">
                                 <rect key="frame" x="0.0" y="291" width="414" height="216"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="PBs-JQ-dFB"/>
+                                </constraints>
                             </pickerView>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="5PD-ZB-qce">
                                 <rect key="frame" x="0.0" y="522" width="414" height="216"/>
@@ -427,10 +430,102 @@
                     <view key="view" contentMode="scaleToFill" id="DGK-29-Ej6">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book" translatesAutoresizingMaskIntoConstraints="NO" id="R8F-sF-PxO">
+                                <rect key="frame" x="0.0" y="44" width="414" height="152"/>
+                            </imageView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QiA-6A-D6a">
+                                <rect key="frame" x="0.0" y="206" width="414" height="143"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="143" id="t5Q-ex-obe"/>
+                                </constraints>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rA4-dT-MaV">
+                                <rect key="frame" x="88.333333333333329" y="354" width="237.33333333333337" height="34.333333333333314"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="hand.tap.fill" catalog="system" title=" Lesezeichen hinzufügen"/>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="u0f-JN-zzh">
+                                <rect key="frame" x="0.0" y="413.33333333333326" width="414" height="399.66666666666674"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyTableViewCell" id="DIY-dc-Mkt" customClass="MyTableViewCell" customModule="Novenen" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="414" height="91.666664123535156"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DIY-dc-Mkt" id="uK7-QF-UeX">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="91.666664123535156"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="sBt-MM-A6z">
+                                                    <rect key="frame" x="5" y="5" width="404" height="81.666666666666671"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bookmark" translatesAutoresizingMaskIntoConstraints="NO" id="rUK-vT-tP8" userLabel="Image View Bookmark">
+                                                            <rect key="frame" x="0.0" y="13.333333333333329" width="97.333333333333329" height="55"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="55" id="GHR-IC-U2u"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Novene zur Göttlichen Barmherzigkeit" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P0R-76-AtU" userLabel="Label Novene">
+                                                            <rect key="frame" x="102.33333333333334" y="0.3333333333333357" width="97.333333333333343" height="81.333333333333314"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tag 2" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsq-Pg-tf0" userLabel="Label Tag">
+                                                            <rect key="frame" x="204.66666666666666" y="30.666666666666664" width="96.999999999999972" height="20.333333333333336"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="svk-BT-k1D">
+                                                            <rect key="frame" x="306.66666666666669" y="25" width="97.333333333333314" height="32"/>
+                                                        </stepper>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="sBt-MM-A6z" firstAttribute="leading" secondItem="uK7-QF-UeX" secondAttribute="leading" constant="5" id="DFn-RH-ojj"/>
+                                                <constraint firstAttribute="trailing" secondItem="sBt-MM-A6z" secondAttribute="trailing" constant="5" id="W7c-Yb-mRh"/>
+                                                <constraint firstItem="sBt-MM-A6z" firstAttribute="top" secondItem="uK7-QF-UeX" secondAttribute="top" constant="5" id="XLr-VW-8Lc"/>
+                                                <constraint firstAttribute="bottom" secondItem="sBt-MM-A6z" secondAttribute="bottom" constant="5" id="k5Y-9J-YLg"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.79168325660000005" green="0.37842524049999998" blue="0.31709522010000002" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="labelNovenenName" destination="P0R-76-AtU" id="45h-jc-FVN"/>
+                                            <outlet property="labelNovenenTag" destination="bsq-Pg-tf0" id="LAG-6d-eQs"/>
+                                            <outlet property="stepperTag" destination="svk-BT-k1D" id="bGB-0M-A1l"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="cyh-9V-Hog"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QiA-6A-D6a" firstAttribute="top" secondItem="DGK-29-Ej6" secondAttribute="top" constant="206" id="442-7g-RXq"/>
+                            <constraint firstItem="R8F-sF-PxO" firstAttribute="top" secondItem="cyh-9V-Hog" secondAttribute="top" id="5bZ-Lx-sVA"/>
+                            <constraint firstItem="rA4-dT-MaV" firstAttribute="top" secondItem="QiA-6A-D6a" secondAttribute="bottom" constant="5" id="K60-3L-gAJ"/>
+                            <constraint firstItem="u0f-JN-zzh" firstAttribute="top" secondItem="rA4-dT-MaV" secondAttribute="bottom" constant="25" id="OEC-JC-blt"/>
+                            <constraint firstItem="cyh-9V-Hog" firstAttribute="bottom" secondItem="u0f-JN-zzh" secondAttribute="bottom" id="P9b-4f-Mqc"/>
+                            <constraint firstItem="u0f-JN-zzh" firstAttribute="leading" secondItem="cyh-9V-Hog" secondAttribute="leading" id="R42-Iz-95m"/>
+                            <constraint firstItem="QiA-6A-D6a" firstAttribute="leading" secondItem="DGK-29-Ej6" secondAttribute="leading" id="TQL-EH-PUv"/>
+                            <constraint firstItem="rA4-dT-MaV" firstAttribute="centerX" secondItem="DGK-29-Ej6" secondAttribute="centerX" id="Um1-hm-Lji"/>
+                            <constraint firstItem="cyh-9V-Hog" firstAttribute="trailing" secondItem="R8F-sF-PxO" secondAttribute="trailing" id="Vuw-YX-cnW"/>
+                            <constraint firstItem="QiA-6A-D6a" firstAttribute="top" secondItem="R8F-sF-PxO" secondAttribute="bottom" constant="10" id="ahE-3W-KML"/>
+                            <constraint firstItem="cyh-9V-Hog" firstAttribute="trailing" secondItem="u0f-JN-zzh" secondAttribute="trailing" id="gij-Jq-Jj4"/>
+                            <constraint firstItem="R8F-sF-PxO" firstAttribute="leading" secondItem="cyh-9V-Hog" secondAttribute="leading" id="sof-g5-jDB"/>
+                            <constraint firstAttribute="trailing" secondItem="QiA-6A-D6a" secondAttribute="trailing" id="xFi-at-43p"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Lesezeichen" image="bookmark" catalog="system" id="iyj-hs-qo4"/>
+                    <connections>
+                        <outlet property="buttonLesezeichenHinzufuegen" destination="rA4-dT-MaV" id="096-W8-Tcb"/>
+                        <outlet property="pickerViewLesezeichenHinzufuegen" destination="QiA-6A-D6a" id="U9n-Ll-iw2"/>
+                        <outlet property="tableViewBookmarks" destination="u0f-JN-zzh" id="d3l-Dl-vIM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kbc-IV-ICl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -511,9 +606,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="TLB-9o-5cM">
                         <rect key="frame" x="0.0" y="44" width="414" height="97.333333333333343"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.25429105442880795" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="largeTitleTextAttributes">
-                            <color key="textShadowColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="-10"/>
                         </textAttributes>
                     </navigationBar>
@@ -531,7 +627,9 @@
         <image name="arrowshape.turn.up.backward.fill" catalog="system" width="128" height="104"/>
         <image name="arrowshape.turn.up.forward.fill" catalog="system" width="128" height="104"/>
         <image name="bible" width="1000" height="1128"/>
+        <image name="book" width="512" height="512"/>
         <image name="book.closed" catalog="system" width="115" height="128"/>
+        <image name="bookmark" width="512" height="512"/>
         <image name="bookmark" catalog="system" width="110" height="128"/>
         <image name="calendar" catalog="system" width="128" height="107"/>
         <image name="calender" width="512" height="512"/>

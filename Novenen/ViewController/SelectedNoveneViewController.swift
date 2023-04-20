@@ -60,13 +60,14 @@ class SelectedNoveneViewController: UIViewController, UIPickerViewDataSource, UI
         labelTagesueberschrift.text = passedNovene[row].Tagesueberschrift
         labelTagesueberschrift.numberOfLines = 0
         labelTagesueberschrift.sizeToFit()
+        
         textViewNovene.text = passedNovene[row].Tagestext! + "\n\n"
         
         buttonGoToLitanei.setTitle(passedNovene[row].Litaneiueberschrift, for: .normal)
-        print (row)
-        
+        print(self.textViewNovene.contentSize.height)
+        print(self.textViewNovene.frame.size.height)
         //Show Button when TextView doesn't require to scroll
-        if (self.textViewNovene.contentSize.height <= self.textViewNovene.frame.size.height && row != 0 && passedNovene[1].Litanei?.isEmpty == false) {
+        if (self.textViewNovene.contentSize.height-5 <= self.textViewNovene.frame.size.height && row != 0 && passedNovene[1].Litanei?.isEmpty == false) {
             buttonGoToLitanei.isHidden = false
         } else {
             buttonGoToLitanei.isHidden = true
