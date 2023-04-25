@@ -5,6 +5,7 @@ public struct Novene : Decodable {
     var Novenenname : String?
     var Tag : String?
     var Tagesueberschrift : String?
+    var Zeitraum : String?
     var Tagestext : String?
     var Litanei : String?
     var Litaneiueberschrift : String?

@@ -212,7 +212,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mTl-Qi-Xsf" userLabel="Stack View Text">
-                                <rect key="frame" x="0.0" y="141.33333333333331" width="414" height="588.66666666666674"/>
+                                <rect key="frame" x="0.0" y="141.33333333333331" width="414" height="587.33333333333348"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLk-V4-fy6">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="33"/>
@@ -227,7 +227,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="isO-k5-o2X">
-                                        <rect key="frame" x="0.0" y="86.000000000000028" width="414" height="502.66666666666674"/>
+                                        <rect key="frame" x="0.0" y="85.999999999999972" width="414" height="501.33333333333326"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" systemColor="labelColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -252,7 +252,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ulq-0V-5a2" userLabel="Button Vor">
-                                <rect key="frame" x="269" y="745" width="120" height="33"/>
+                                <rect key="frame" x="269" y="743.66666666666663" width="120" height="34.333333333333371"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="T5y-1y-jPv"/>
@@ -366,13 +366,13 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUW-5v-KBz" userLabel="Label Datum">
-                                <rect key="frame" x="5" y="174" width="404" height="102"/>
+                                <rect key="frame" x="5" y="174" width="404" height="68"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" verticalHuggingPriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="Z3H-Qd-gMU">
-                                <rect key="frame" x="0.0" y="291" width="414" height="216"/>
+                                <rect key="frame" x="0.0" y="257" width="414" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="PBs-JQ-dFB"/>
                                 </constraints>
@@ -432,7 +432,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book" translatesAutoresizingMaskIntoConstraints="NO" id="R8F-sF-PxO">
-                                <rect key="frame" x="0.0" y="44" width="414" height="152"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="137"/>
                             </imageView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QiA-6A-D6a">
                                 <rect key="frame" x="0.0" y="206" width="414" height="143"/>
@@ -446,6 +446,9 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="hand.tap.fill" catalog="system" title=" Lesezeichen hinzufügen"/>
+                                <connections>
+                                    <action selector="LesezeichenHinzufuegenClicked:" destination="PWT-ef-R9j" eventType="touchUpInside" id="AIc-SN-XGd"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="u0f-JN-zzh">
                                 <rect key="frame" x="0.0" y="413.33333333333326" width="414" height="399.66666666666674"/>
@@ -514,7 +517,7 @@
                             <constraint firstItem="QiA-6A-D6a" firstAttribute="leading" secondItem="DGK-29-Ej6" secondAttribute="leading" id="TQL-EH-PUv"/>
                             <constraint firstItem="rA4-dT-MaV" firstAttribute="centerX" secondItem="DGK-29-Ej6" secondAttribute="centerX" id="Um1-hm-Lji"/>
                             <constraint firstItem="cyh-9V-Hog" firstAttribute="trailing" secondItem="R8F-sF-PxO" secondAttribute="trailing" id="Vuw-YX-cnW"/>
-                            <constraint firstItem="QiA-6A-D6a" firstAttribute="top" secondItem="R8F-sF-PxO" secondAttribute="bottom" constant="10" id="ahE-3W-KML"/>
+                            <constraint firstItem="QiA-6A-D6a" firstAttribute="top" secondItem="R8F-sF-PxO" secondAttribute="bottom" constant="25" id="ahE-3W-KML"/>
                             <constraint firstItem="cyh-9V-Hog" firstAttribute="trailing" secondItem="u0f-JN-zzh" secondAttribute="trailing" id="gij-Jq-Jj4"/>
                             <constraint firstItem="R8F-sF-PxO" firstAttribute="leading" secondItem="cyh-9V-Hog" secondAttribute="leading" id="sof-g5-jDB"/>
                             <constraint firstAttribute="trailing" secondItem="QiA-6A-D6a" secondAttribute="trailing" id="xFi-at-43p"/>
