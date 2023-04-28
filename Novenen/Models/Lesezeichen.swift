@@ -1,6 +1,6 @@
 import UIKit
 
-struct Lesezeichen {
+struct Lesezeichen : Codable {
     
     var Novene : String?
     var Tag: String?

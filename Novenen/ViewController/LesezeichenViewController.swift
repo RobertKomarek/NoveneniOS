@@ -15,28 +15,41 @@ class LesezeichenViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var tableViewBookmarks: UITableView!
     
     @IBAction func LesezeichenHinzufuegenClicked(_ sender: Any) {
-        //print("\(selectedNovene) \(selectedTag)")tv
         let alert = UIAlertController(title: "Lesezeichen...", message: "...für \(selectedNovene ?? "Fatima") an \(selectedTag ?? "Tag 1") hinzufügen?", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Ja", style: UIAlertAction.Style.default, handler: alertHandler))
-                        
         alert.addAction(UIAlertAction(title: "Nein", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
     
     func alertHandler(alert: UIAlertAction!) {
-        print("Lesezeichen hinzufügen bestätigt")
+        
+        if let encoded = UserDefaults.standard.object(forKey: "Lesezeichen") as? Data {
+            lesezeichenDefaults = try! PropertyListDecoder().decode([Lesezeichen].self, from: encoded)
+        }
+       
+        lesezeichenDefaults.append(Lesezeichen(
+            Novene:selectedNovene,
+            Tag: selectedTag)
+        )
+        
+        try? UserDefaults.standard.set(PropertyListEncoder().encode(lesezeichenDefaults), forKey: "Lesezeichen")
     }
     
     var novenen:[Novene] = []
     var pickerData:[String] = []
     var pickerTage: [String] = ["Tag 1", "Tag 2", "Tag 3", "Tag 4", "Tag 5", "Tag 6", "Tag 7", "Tag 8", "Tag 9"]
     var lesezeichenNew: [Lesezeichen] = []
+    var lesezeichenDefaults : [Lesezeichen] = []
     var selectedNovene: String?
     var selectedTag: String?
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Lesezeichen laden
+        let defaults = UserDefaults.standard
+         lesezeichenDefaults = defaults.array(forKey: "Lesezeichen") as? [Lesezeichen] ?? [Lesezeichen]()
         
         tableViewBookmarks.delegate = self
         tableViewBookmarks.dataSource = self
@@ -70,19 +83,23 @@ class LesezeichenViewController: UIViewController, UITableViewDelegate, UITableV
         selectedTag = pickerTage[0]
     }
     
-    let rainbow: [UIColor] = [.red, .yellow, .green, .orange, .blue, .purple, .magenta]
+    //let rainbow: [UIColor] = [.red, .yellow, .green, .orange, .blue, .purple, .magenta]
     
     /*func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         <#code#>
     }*/
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return rainbow.count
+        //return rainbow.count
+        return lesezeichenDefaults.count
     }
   
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableViewBookmarks.dequeueReusableCell(withIdentifier: "MyTableViewCell", for: indexPath)
+        var content = cell.defaultContentConfiguration()
+        content.text = lesezeichenDefaults[indexPath.item].Novene
+        cell.contentConfiguration = content
         return cell
     }
     
