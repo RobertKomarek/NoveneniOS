@@ -48,14 +48,14 @@ class LesezeichenViewController: UIViewController, UITableViewDelegate, UITableV
         super.viewDidLoad()
         
         //Lesezeichen laden
-        let defaults = UserDefaults.standard
-         lesezeichenDefaults = defaults.array(forKey: "Lesezeichen") as? [Lesezeichen] ?? [Lesezeichen]()
+        if let encoded = UserDefaults.standard.object(forKey: "Lesezeichen") as? Data {
+            lesezeichenDefaults = try! PropertyListDecoder().decode([Lesezeichen].self, from: encoded)
+        }
         
         tableViewBookmarks.delegate = self
         tableViewBookmarks.dataSource = self
         pickerViewLesezeichenHinzufuegen.delegate = self
         pickerViewLesezeichenHinzufuegen.dataSource = self
-        
         buttonLesezeichenHinzufuegen.layer.cornerRadius = 10
         
         //Load Novenen-Details
@@ -83,38 +83,26 @@ class LesezeichenViewController: UIViewController, UITableViewDelegate, UITableV
         selectedTag = pickerTage[0]
     }
     
-    //let rainbow: [UIColor] = [.red, .yellow, .green, .orange, .blue, .purple, .magenta]
-    
     /*func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         <#code#>
     }*/
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //return rainbow.count
         return lesezeichenDefaults.count
     }
-  
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableViewBookmarks.dequeueReusableCell(withIdentifier: "MyTableViewCell", for: indexPath)
-        var content = cell.defaultContentConfiguration()
-        content.text = lesezeichenDefaults[indexPath.item].Novene
-        cell.contentConfiguration = content
+        let data = lesezeichenDefaults[indexPath.row]
+        let cell = tableViewBookmarks.dequeueReusableCell(withIdentifier: "MyTableViewCell", for: indexPath) as! MyTableViewCell
+        cell.labelNovenenName.text = data.Novene
+        cell.labelNovenenTag.text = data.Tag
         return cell
     }
     
-    /*func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell = tableViewBookmarks.dequeueReusableCell(withIdentifier: "MyTableViewCell", for: indexPath)
-        cell.backgroundColor = rainbow[indexPath.item]
-        
-        //Default Content Configuration
-       var content = cell.defaultContentConfiguration()
-       content.text = rainbow[indexPath.item].accessibilityName.capitalized
-       cell.contentConfiguration = content
-        
-        return cell
-    }*/
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return lesezeichenDefaults.count
+    }
+    
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 2
