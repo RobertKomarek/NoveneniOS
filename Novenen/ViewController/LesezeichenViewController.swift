@@ -22,7 +22,6 @@ class LesezeichenViewController: UIViewController, UITableViewDelegate, UITableV
     }
     
     func alertHandler(alert: UIAlertAction!) {
-        
         if let encoded = UserDefaults.standard.object(forKey: "Lesezeichen") as? Data {
             lesezeichenDefaults = try! PropertyListDecoder().decode([Lesezeichen].self, from: encoded)
         }
@@ -33,6 +32,8 @@ class LesezeichenViewController: UIViewController, UITableViewDelegate, UITableV
         )
         
         try? UserDefaults.standard.set(PropertyListEncoder().encode(lesezeichenDefaults), forKey: "Lesezeichen")
+        
+        tableViewBookmarks.reloadData()
     }
     
     var novenen:[Novene] = []
@@ -83,24 +84,46 @@ class LesezeichenViewController: UIViewController, UITableViewDelegate, UITableV
         selectedTag = pickerTage[0]
     }
     
-    /*func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        <#code#>
-    }*/
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return lesezeichenDefaults.count
+        if lesezeichenDefaults.count == 0 {
+            return 3
+        } else {
+            return lesezeichenDefaults.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let data = lesezeichenDefaults[indexPath.row]
         let cell = tableViewBookmarks.dequeueReusableCell(withIdentifier: "MyTableViewCell", for: indexPath) as! MyTableViewCell
-        cell.labelNovenenName.text = data.Novene
-        cell.labelNovenenTag.text = data.Tag
+        
+        if lesezeichenDefaults.count != 0 {
+            let data = lesezeichenDefaults[indexPath.row]
+            cell.labelNovenenName.text = data.Novene
+            cell.labelNovenenTag.text = data.Tag
+        } else {
+            cell.labelNovenenName.text = "LEER"
+            cell.labelNovenenTag.text = "LEER"
+        }
         return cell
     }
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return lesezeichenDefaults.count
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //Delete selected Row
+        let selectedRow = tableViewBookmarks.indexPathForSelectedRow
+        
+        if lesezeichenDefaults.count != 0 {
+            let alert = UIAlertController(title: "Löschen", message: "Lesezeichen für \(lesezeichenDefaults[selectedRow!.row].Novene ?? "keine Angabe") an \(lesezeichenDefaults[selectedRow!.row].Tag ?? "keine Angabe") löschen?", preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "Ja", style: UIAlertAction.Style.default, handler: deleteSelectedRow(alert:)))
+            alert.addAction(UIAlertAction(title: "Nein", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func deleteSelectedRow(alert: UIAlertAction) {
+        let selectedRow = tableViewBookmarks.indexPathForSelectedRow
+        lesezeichenDefaults.remove(at: selectedRow!.row)
+        tableViewBookmarks.reloadData()
+        //Update UserDefaults
+        try? UserDefaults.standard.set(PropertyListEncoder().encode(lesezeichenDefaults), forKey: "Lesezeichen")
     }
     
     
