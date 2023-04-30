@@ -2,25 +2,57 @@
 import UIKit
 
 class MyTableViewCell : UITableViewCell {
-    
+   
     @IBOutlet weak var stepperTag: UIStepper!
+    @IBOutlet weak var labelNovenenTagBezeichnung: UILabel!
     @IBOutlet weak var labelNovenenTag: UILabel!
     @IBOutlet weak var labelNovenenName: UILabel!
- }
+}
 
 class LesezeichenViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    var novenen:[Novene] = []
+    var pickerData:[String] = []
+    var pickerTage: [Int] = [1,2,3,4,5,6,7,8,9]
+    var lesezeichenNew: [Lesezeichen] = []
+    var lesezeichenDefaults : [Lesezeichen] = []
+    var selectedNovene: String = ""
+    var selectedTag: Int = 0
     
     @IBOutlet weak var pickerViewLesezeichenHinzufuegen: UIPickerView!
     @IBOutlet weak var buttonLesezeichenHinzufuegen: UIButton!
     @IBOutlet weak var tableViewBookmarks: UITableView!
     
+    @IBAction func stepperTagClicked(_ sender: Any, forEvent event: UIEvent) {
+        
+        let clickedStepper = sender as! UIStepper
+        var currentDay = lesezeichenDefaults[clickedStepper.tag].Tag
+        
+        if clickedStepper.value == 0.0 && currentDay >= 2 {
+            currentDay = currentDay - 1
+            
+            lesezeichenDefaults[clickedStepper.tag].Tag = currentDay
+            
+            tableViewBookmarks.reloadData()
+            
+            try? UserDefaults.standard.set(PropertyListEncoder().encode(lesezeichenDefaults), forKey: "Lesezeichen")
+        }
+        
+        if clickedStepper.value == 1.0 && currentDay < 9 {
+            currentDay = currentDay + 1
+            lesezeichenDefaults[clickedStepper.tag].Tag = currentDay
+            
+            tableViewBookmarks.reloadData()
+            
+            try? UserDefaults.standard.set(PropertyListEncoder().encode(lesezeichenDefaults), forKey: "Lesezeichen")
+        }
+    }
     @IBAction func LesezeichenHinzufuegenClicked(_ sender: Any) {
-        let alert = UIAlertController(title: "Lesezeichen...", message: "...für \(selectedNovene ?? "Fatima") an \(selectedTag ?? "Tag 1") hinzufügen?", preferredStyle: UIAlertController.Style.alert)
+        let alert = UIAlertController(title: "Lesezeichen...", message: "...für \(selectedNovene) an Tag \(selectedTag) hinzufügen?", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Ja", style: UIAlertAction.Style.default, handler: alertHandler))
         alert.addAction(UIAlertAction(title: "Nein", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
-    
     func alertHandler(alert: UIAlertAction!) {
         if let encoded = UserDefaults.standard.object(forKey: "Lesezeichen") as? Data {
             lesezeichenDefaults = try! PropertyListDecoder().decode([Lesezeichen].self, from: encoded)
@@ -35,14 +67,6 @@ class LesezeichenViewController: UIViewController, UITableViewDelegate, UITableV
         
         tableViewBookmarks.reloadData()
     }
-    
-    var novenen:[Novene] = []
-    var pickerData:[String] = []
-    var pickerTage: [String] = ["Tag 1", "Tag 2", "Tag 3", "Tag 4", "Tag 5", "Tag 6", "Tag 7", "Tag 8", "Tag 9"]
-    var lesezeichenNew: [Lesezeichen] = []
-    var lesezeichenDefaults : [Lesezeichen] = []
-    var selectedNovene: String?
-    var selectedTag: String?
     
 
     override func viewDidLoad() {
@@ -98,25 +122,28 @@ class LesezeichenViewController: UIViewController, UITableViewDelegate, UITableV
         if lesezeichenDefaults.count != 0 {
             let data = lesezeichenDefaults[indexPath.row]
             cell.labelNovenenName.text = data.Novene
-            cell.labelNovenenTag.text = data.Tag
+            cell.labelNovenenTagBezeichnung.text = "Tag"
+            cell.labelNovenenTag.text = String(data.Tag)
+            cell.stepperTag.tag = indexPath.row
         } else {
             cell.labelNovenenName.text = "LEER"
             cell.labelNovenenTag.text = "LEER"
+            cell.labelNovenenTagBezeichnung.text = ""
         }
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //Delete selected Row
-        let selectedRow = tableViewBookmarks.indexPathForSelectedRow
-        
-        if lesezeichenDefaults.count != 0 {
-            let alert = UIAlertController(title: "Löschen", message: "Lesezeichen für \(lesezeichenDefaults[selectedRow!.row].Novene ?? "keine Angabe") an \(lesezeichenDefaults[selectedRow!.row].Tag ?? "keine Angabe") löschen?", preferredStyle: UIAlertController.Style.alert)
-            alert.addAction(UIAlertAction(title: "Ja", style: UIAlertAction.Style.default, handler: deleteSelectedRow(alert:)))
-            alert.addAction(UIAlertAction(title: "Nein", style: UIAlertAction.Style.default, handler: nil))
-            self.present(alert, animated: true, completion: nil)
-        }
+    //Delete selected Row
+    let selectedRow = tableViewBookmarks.indexPathForSelectedRow
+    
+    if lesezeichenDefaults.count != 0 {
+        let alert = UIAlertController(title: "Löschen", message: "Lesezeichen für \(lesezeichenDefaults[selectedRow!.row].Novene) an Tag  \(lesezeichenDefaults[selectedRow!.row].Tag) löschen?", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Ja", style: UIAlertAction.Style.default, handler: deleteSelectedRow(alert:)))
+        alert.addAction(UIAlertAction(title: "Nein", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
+}
     
     func deleteSelectedRow(alert: UIAlertAction) {
         let selectedRow = tableViewBookmarks.indexPathForSelectedRow
@@ -152,7 +179,7 @@ class LesezeichenViewController: UIViewController, UITableViewDelegate, UITableV
         if component ==  0 {
             return pickerData[row]
         } else {
-            return pickerTage[row]
+            return String(pickerTage[row])
         }
     }
     
@@ -163,4 +190,6 @@ class LesezeichenViewController: UIViewController, UITableViewDelegate, UITableV
             return 75.0
         }
     }
+    
+    
 }
