@@ -26,27 +26,30 @@ class LesezeichenViewController: UIViewController, UITableViewDelegate, UITableV
     @IBAction func stepperTagClicked(_ sender: Any, forEvent event: UIEvent) {
         
         let clickedStepper = sender as! UIStepper
-        var currentDay = lesezeichenDefaults[clickedStepper.tag].Tag
-        
-        if clickedStepper.value == 0.0 && currentDay >= 2 {
-            currentDay = currentDay - 1
+        if lesezeichenDefaults.count != 0 {
+            var currentDay = lesezeichenDefaults[clickedStepper.tag].Tag
             
-            lesezeichenDefaults[clickedStepper.tag].Tag = currentDay
+            if clickedStepper.value == 0.0 && currentDay >= 2 {
+                currentDay = currentDay - 1
+                
+                lesezeichenDefaults[clickedStepper.tag].Tag = currentDay
+                
+                tableViewBookmarks.reloadData()
+                
+                try? UserDefaults.standard.set(PropertyListEncoder().encode(lesezeichenDefaults), forKey: "Lesezeichen")
+            }
             
-            tableViewBookmarks.reloadData()
-            
-            try? UserDefaults.standard.set(PropertyListEncoder().encode(lesezeichenDefaults), forKey: "Lesezeichen")
-        }
-        
-        if clickedStepper.value == 1.0 && currentDay < 9 {
-            currentDay = currentDay + 1
-            lesezeichenDefaults[clickedStepper.tag].Tag = currentDay
-            
-            tableViewBookmarks.reloadData()
-            
-            try? UserDefaults.standard.set(PropertyListEncoder().encode(lesezeichenDefaults), forKey: "Lesezeichen")
+            if clickedStepper.value == 1.0 && currentDay < 9 {
+                currentDay = currentDay + 1
+                lesezeichenDefaults[clickedStepper.tag].Tag = currentDay
+                
+                tableViewBookmarks.reloadData()
+                
+                try? UserDefaults.standard.set(PropertyListEncoder().encode(lesezeichenDefaults), forKey: "Lesezeichen")
+            }
         }
     }
+    
     @IBAction func LesezeichenHinzufuegenClicked(_ sender: Any) {
         let alert = UIAlertController(title: "Lesezeichen...", message: "...für \(selectedNovene) an Tag \(selectedTag) hinzufügen?", preferredStyle: UIAlertController.Style.alert)
         alert.addAction(UIAlertAction(title: "Ja", style: UIAlertAction.Style.default, handler: alertHandler))

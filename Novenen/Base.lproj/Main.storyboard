@@ -431,7 +431,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="2a4-iy-5WF">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="2a4-iy-5WF">
                                 <rect key="frame" x="0.0" y="59" width="414" height="679"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book" translatesAutoresizingMaskIntoConstraints="NO" id="R8F-sF-PxO">
@@ -440,55 +440,53 @@
                                             <constraint firstAttribute="height" constant="135" id="LmT-6S-2aI"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zum Löschen auf Lesezeichen tippen!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGp-U4-REP">
-                                        <rect key="frame" x="0.0" y="150" width="414" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zum Löschen auf das Lesezeichen tippen!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGp-U4-REP">
+                                        <rect key="frame" x="0.0" y="160" width="414" height="20"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" red="0.79168325660000005" green="0.37842524049999998" blue="0.31709522010000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="u0f-JN-zzh">
-                                        <rect key="frame" x="0.0" y="185" width="414" height="344"/>
+                                        <rect key="frame" x="0.0" y="205" width="414" height="314"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyTableViewCell" id="DIY-dc-Mkt" customClass="MyTableViewCell" customModule="Novenen" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="50" width="414" height="65.333335876464844"/>
+                                                <rect key="frame" x="0.0" y="50" width="414" height="62.333332061767578"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="DIY-dc-Mkt" id="uK7-QF-UeX">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="65.333335876464844"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="62.333332061767578"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="left" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="sBt-MM-A6z">
-                                                            <rect key="frame" x="5" y="5.0000000000000036" width="404" height="55.333333333333343"/>
+                                                        <stackView opaque="NO" contentMode="scaleAspectFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mub-QA-41Z">
+                                                            <rect key="frame" x="0.0" y="0.0" width="409" height="55.333333333333336"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="bookmark" translatesAutoresizingMaskIntoConstraints="NO" id="rUK-vT-tP8" userLabel="Image View Bookmark">
-                                                                    <rect key="frame" x="0.0" y="0.33333333333333215" width="73.333333333333329" height="55"/>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bookmark" translatesAutoresizingMaskIntoConstraints="NO" id="rUK-vT-tP8" userLabel="Image View Bookmark">
+                                                                    <rect key="frame" x="0.0" y="0.33333333333333215" width="65" height="55"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="55" id="GHR-IC-U2u"/>
+                                                                        <constraint firstAttribute="width" constant="65" id="byi-3v-yXE"/>
                                                                     </constraints>
                                                                 </imageView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Novene zur Göttlichen Barmherzigkeit" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P0R-76-AtU" userLabel="Label Novene">
-                                                                    <rect key="frame" x="78.333333333333314" y="7.3333333333333321" width="174" height="40.666666666666671"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Novene zur Göttlichen Barmherzigkeit" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P0R-76-AtU" userLabel="Label Novene">
+                                                                    <rect key="frame" x="74.999999999999986" y="7.3333333333333321" width="174.66666666666663" height="40.666666666666671"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Tag" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G5D-Ew-RYZ" userLabel="Label TabBezeichnung">
-                                                                    <rect key="frame" x="257.33333333333331" y="17.666666666666671" width="27.666666666666686" height="20.333333333333329"/>
+                                                                    <rect key="frame" x="259.66666666666669" y="17.666666666666671" width="27.666666666666686" height="20.333333333333329"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="1" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hfa-uO-OTk" userLabel="Label Tag">
-                                                                    <rect key="frame" x="290" y="17.666666666666671" width="15" height="20.333333333333329"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="width" constant="15" id="S3g-wx-cPQ"/>
-                                                                    </constraints>
+                                                                    <rect key="frame" x="297.33333333333331" y="17.666666666666671" width="7.6666666666666856" height="20.333333333333329"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="svk-BT-k1D">
-                                                                    <rect key="frame" x="310" y="11.666666666666668" width="94" height="32"/>
+                                                                <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="svk-BT-k1D">
+                                                                    <rect key="frame" x="315" y="11.666666666666664" width="94" height="32"/>
                                                                     <connections>
                                                                         <action selector="stepperTagClicked:forEvent:" destination="PWT-ef-R9j" eventType="touchUpInside" id="pDZ-vt-r6D"/>
                                                                     </connections>
@@ -497,10 +495,10 @@
                                                         </stackView>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstItem="sBt-MM-A6z" firstAttribute="leading" secondItem="uK7-QF-UeX" secondAttribute="leading" constant="5" id="DFn-RH-ojj"/>
-                                                        <constraint firstAttribute="trailing" secondItem="sBt-MM-A6z" secondAttribute="trailing" constant="5" id="W7c-Yb-mRh"/>
-                                                        <constraint firstItem="sBt-MM-A6z" firstAttribute="top" secondItem="uK7-QF-UeX" secondAttribute="top" constant="5" id="XLr-VW-8Lc"/>
-                                                        <constraint firstAttribute="bottom" secondItem="sBt-MM-A6z" secondAttribute="bottom" constant="5" id="k5Y-9J-YLg"/>
+                                                        <constraint firstAttribute="trailing" secondItem="mub-QA-41Z" secondAttribute="trailing" constant="5" id="3Vc-CG-qBx"/>
+                                                        <constraint firstAttribute="bottom" secondItem="mub-QA-41Z" secondAttribute="bottom" constant="7" id="3Yi-D1-fey"/>
+                                                        <constraint firstItem="mub-QA-41Z" firstAttribute="top" secondItem="uK7-QF-UeX" secondAttribute="top" id="c44-qC-9TE"/>
+                                                        <constraint firstItem="mub-QA-41Z" firstAttribute="leading" secondItem="uK7-QF-UeX" secondAttribute="leading" id="mbi-1y-fFh"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
@@ -654,8 +652,8 @@
         <image name="bible" width="1000" height="1128"/>
         <image name="book" width="512" height="512"/>
         <image name="book.closed" catalog="system" width="115" height="128"/>
-        <image name="bookmark" catalog="system" width="110" height="128"/>
         <image name="bookmark" width="512" height="512"/>
+        <image name="bookmark" catalog="system" width="110" height="128"/>
         <image name="calendar" catalog="system" width="128" height="107"/>
         <image name="calender" width="512" height="512"/>
         <image name="hand.tap.fill" catalog="system" width="115" height="128"/>
