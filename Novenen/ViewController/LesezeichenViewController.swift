@@ -56,6 +56,7 @@ class LesezeichenViewController: UIViewController, UITableViewDelegate, UITableV
         alert.addAction(UIAlertAction(title: "Nein", style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
     }
+    
     func alertHandler(alert: UIAlertAction!) {
         if let encoded = UserDefaults.standard.object(forKey: "Lesezeichen") as? Data {
             lesezeichenDefaults = try! PropertyListDecoder().decode([Lesezeichen].self, from: encoded)
@@ -63,8 +64,9 @@ class LesezeichenViewController: UIViewController, UITableViewDelegate, UITableV
        
         lesezeichenDefaults.append(Lesezeichen(
             Novene:selectedNovene,
-            Tag: selectedTag)
-        )
+            Tag: selectedTag))
+        
+        lesezeichenDefaults.sort {$0.Novene < $1.Novene}
         
         try? UserDefaults.standard.set(PropertyListEncoder().encode(lesezeichenDefaults), forKey: "Lesezeichen")
         

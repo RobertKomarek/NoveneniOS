@@ -14,7 +14,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" userLabel="Novenen" customClass="NovenenViewController" customModule="Novenen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kmp-0Q-wGi" userLabel="Image Novene">
@@ -97,7 +97,7 @@
             <objects>
                 <viewController id="4ah-wm-Vz5" userLabel="Selected Novene" customClass="SelectedNoveneViewController" customModule="Novenen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uav-lO-v5q">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JX2-R6-tkS">
@@ -111,7 +111,7 @@
                                 <rect key="frame" x="0.0" y="203.66666666666666" width="414" height="504.33333333333337"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                <color key="textColor" systemColor="labelColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -173,7 +173,7 @@
             <objects>
                 <viewController id="Jfe-WS-Rlh" customClass="LitaneiViewController" customModule="Novenen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RnM-mD-YeI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="b39-PJ-f2H">
@@ -208,7 +208,7 @@
             <objects>
                 <viewController id="rZe-il-yO0" userLabel="Selected Bibelstelle" customClass="SelectedBibelstelleViewController" customModule="Novenen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FfQ-bS-sVq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mTl-Qi-Xsf" userLabel="Stack View Text">
@@ -229,7 +229,7 @@
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="isO-k5-o2X">
                                         <rect key="frame" x="0.0" y="85.999999999999972" width="414" height="501.33333333333326"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <color key="textColor" systemColor="labelColor"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
@@ -296,17 +296,17 @@
             <objects>
                 <viewController title="Bibelstelle" id="3S0-iK-9Uy" customClass="BibelstelleViewController" customModule="Novenen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="czb-NE-18X">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="M9D-qc-H63">
-                                <rect key="frame" x="0.0" y="55" width="414" height="683"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="738"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bible" translatesAutoresizingMaskIntoConstraints="NO" id="Mcr-W4-H5U">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="341"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="368.66666666666669"/>
                                     </imageView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kd5-B2-oCY">
-                                        <rect key="frame" x="0.0" y="342" width="414" height="341"/>
+                                        <rect key="frame" x="0.0" y="369.66666666666674" width="414" height="368.33333333333326"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" name="Color"/>
@@ -333,7 +333,7 @@
                         <viewLayoutGuide key="safeArea" id="oD2-ot-LGP"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="M9D-qc-H63" firstAttribute="top" secondItem="czb-NE-18X" secondAttribute="top" constant="55" id="MF8-jE-13l"/>
+                            <constraint firstItem="M9D-qc-H63" firstAttribute="top" secondItem="czb-NE-18X" secondAttribute="top" id="ULL-69-iNv"/>
                             <constraint firstItem="oD2-ot-LGP" firstAttribute="bottom" secondItem="fNx-XV-96f" secondAttribute="bottom" constant="25" id="WIF-Xc-jbZ"/>
                             <constraint firstItem="M9D-qc-H63" firstAttribute="leading" secondItem="oD2-ot-LGP" secondAttribute="leading" id="ZgG-IB-mPG"/>
                             <constraint firstItem="fNx-XV-96f" firstAttribute="top" secondItem="M9D-qc-H63" secondAttribute="bottom" constant="15" id="d4t-QA-Ct2"/>
@@ -356,7 +356,7 @@
             <objects>
                 <viewController id="48D-Tq-NEy" userLabel="Erinnerung" customClass="ErinnerungViewController" customModule="Novenen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dvg-If-dEM">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calender" translatesAutoresizingMaskIntoConstraints="NO" id="dk7-JU-fHD" userLabel="image calender">
@@ -366,18 +366,15 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUW-5v-KBz" userLabel="Label Datum">
-                                <rect key="frame" x="5" y="174" width="404" height="68"/>
+                                <rect key="frame" x="5" y="174" width="404" height="126"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" verticalHuggingPriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="Z3H-Qd-gMU">
-                                <rect key="frame" x="0.0" y="257" width="414" height="250"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="PBs-JQ-dFB"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="303" width="414" height="216"/>
                             </pickerView>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="5PD-ZB-qce">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="5PD-ZB-qce">
                                 <rect key="frame" x="0.0" y="522" width="414" height="216"/>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tQo-eP-SUA" userLabel="Button Bestätigen">
@@ -400,7 +397,7 @@
                             <constraint firstItem="S2j-Oj-OF2" firstAttribute="bottom" secondItem="tQo-eP-SUA" secondAttribute="bottom" constant="25" id="Cls-sB-eCW"/>
                             <constraint firstItem="S2j-Oj-OF2" firstAttribute="trailing" secondItem="HUW-5v-KBz" secondAttribute="trailing" constant="5" id="FBD-VL-i0r"/>
                             <constraint firstItem="HUW-5v-KBz" firstAttribute="leading" secondItem="S2j-Oj-OF2" secondAttribute="leading" constant="5" id="I9N-Pl-Y2w"/>
-                            <constraint firstItem="5PD-ZB-qce" firstAttribute="top" secondItem="Z3H-Qd-gMU" secondAttribute="bottom" constant="15" id="NaQ-z8-DGZ"/>
+                            <constraint firstItem="5PD-ZB-qce" firstAttribute="top" secondItem="Z3H-Qd-gMU" secondAttribute="bottom" constant="3" id="NaQ-z8-DGZ"/>
                             <constraint firstItem="5PD-ZB-qce" firstAttribute="leading" secondItem="S2j-Oj-OF2" secondAttribute="leading" id="OhI-Qa-7gw"/>
                             <constraint firstItem="tQo-eP-SUA" firstAttribute="top" secondItem="5PD-ZB-qce" secondAttribute="bottom" constant="15" id="U42-iF-isJ"/>
                             <constraint firstItem="Z3H-Qd-gMU" firstAttribute="leading" secondItem="S2j-Oj-OF2" secondAttribute="leading" id="VDW-W2-y6M"/>
@@ -408,7 +405,7 @@
                             <constraint firstItem="5PD-ZB-qce" firstAttribute="trailing" secondItem="S2j-Oj-OF2" secondAttribute="trailing" id="auc-fS-AAU"/>
                             <constraint firstItem="Z3H-Qd-gMU" firstAttribute="trailing" secondItem="S2j-Oj-OF2" secondAttribute="trailing" id="hyQ-92-EPz"/>
                             <constraint firstItem="dk7-JU-fHD" firstAttribute="centerX" secondItem="dvg-If-dEM" secondAttribute="centerX" id="ih2-tr-28w"/>
-                            <constraint firstItem="Z3H-Qd-gMU" firstAttribute="top" secondItem="HUW-5v-KBz" secondAttribute="bottom" constant="15" id="kCo-KU-sdN"/>
+                            <constraint firstItem="Z3H-Qd-gMU" firstAttribute="top" secondItem="HUW-5v-KBz" secondAttribute="bottom" constant="3" id="kCo-KU-sdN"/>
                             <constraint firstItem="HUW-5v-KBz" firstAttribute="top" secondItem="dk7-JU-fHD" secondAttribute="bottom" constant="15" id="qQo-KP-AZ4"/>
                         </constraints>
                     </view>
@@ -428,26 +425,26 @@
             <objects>
                 <viewController id="PWT-ef-R9j" userLabel="Lesezeichen" customClass="LesezeichenViewController" customModule="Novenen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DGK-29-Ej6">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="2a4-iy-5WF">
                                 <rect key="frame" x="0.0" y="59" width="414" height="679"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book" translatesAutoresizingMaskIntoConstraints="NO" id="R8F-sF-PxO">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="135"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="135" id="LmT-6S-2aI"/>
+                                            <constraint firstAttribute="height" constant="100" id="LmT-6S-2aI"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zum Löschen auf das Lesezeichen tippen!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGp-U4-REP">
-                                        <rect key="frame" x="0.0" y="160" width="414" height="20"/>
+                                        <rect key="frame" x="0.0" y="125" width="414" height="20"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="17"/>
                                         <color key="textColor" red="0.79168325660000005" green="0.37842524049999998" blue="0.31709522010000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="u0f-JN-zzh">
-                                        <rect key="frame" x="0.0" y="205" width="414" height="314"/>
+                                        <rect key="frame" x="0.0" y="170" width="414" height="349"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyTableViewCell" id="DIY-dc-Mkt" customClass="MyTableViewCell" customModule="Novenen" customModuleProvider="target">
@@ -559,7 +556,7 @@
             <objects>
                 <viewController id="mM6-Xc-Tia" userLabel="Impressum" customClass="ImpressumViewController" customModule="Novenen" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l65-JX-Qxx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="DZT-93-wzx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -575,10 +572,18 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="sqz-Mf-mEU" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BPV-x0-zk6">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="BPV-x0-zk6">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
+                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" name="AccentColor"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="4ik-D0-GUp" kind="relationship" relationship="viewControllers" id="IpW-f2-mrd"/>
@@ -671,9 +676,6 @@
         <namedColor name="parchment_paper">
             <color red="0.93725490196078431" green="0.89803921568627454" blue="0.83529411764705885" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="labelColor">
-            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
