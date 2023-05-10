@@ -90,7 +90,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-139" y="715"/>
+            <point key="canvasLocation" x="-229" y="715"/>
         </scene>
         <!--Selected Novene-->
         <scene sceneID="9TL-Ww-bUt">
@@ -166,7 +166,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KBw-dZ-0Ok" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-139.13043478260872" y="1411.6071428571429"/>
+            <point key="canvasLocation" x="-230" y="1414"/>
         </scene>
         <!--Litanei View Controller-->
         <scene sceneID="duH-iF-kQi">
@@ -201,7 +201,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jfu-gj-saq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-139.13043478260872" y="2092.6339285714284"/>
+            <point key="canvasLocation" x="-230" y="2136"/>
         </scene>
         <!--Selected Bibelstelle-->
         <scene sceneID="2c9-dv-J7x">
@@ -212,7 +212,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="mTl-Qi-Xsf" userLabel="Stack View Text">
-                                <rect key="frame" x="0.0" y="141.33333333333331" width="414" height="587.33333333333348"/>
+                                <rect key="frame" x="0.0" y="141.33333333333331" width="414" height="621.66666666666674"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eLk-V4-fy6">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="33"/>
@@ -227,16 +227,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="isO-k5-o2X">
-                                        <rect key="frame" x="0.0" y="85.999999999999972" width="414" height="501.33333333333326"/>
+                                        <rect key="frame" x="0.0" y="86" width="414" height="535.66666666666663"/>
                                         <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="eLk-V4-fy6" firstAttribute="top" secondItem="mTl-Qi-Xsf" secondAttribute="top" constant="25" id="Sgx-3R-T7E"/>
-                                </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJ4-UQ-TBm" userLabel="Button Zurück">
                                 <rect key="frame" x="25" y="743.66666666666663" width="120" height="34.333333333333371"/>
@@ -273,9 +270,9 @@
                             <constraint firstItem="mTl-Qi-Xsf" firstAttribute="top" secondItem="qe1-b2-RQ9" secondAttribute="top" id="9Oe-Zm-m38"/>
                             <constraint firstItem="qe1-b2-RQ9" firstAttribute="trailing" secondItem="mTl-Qi-Xsf" secondAttribute="trailing" id="TjN-xr-XfG"/>
                             <constraint firstItem="qe1-b2-RQ9" firstAttribute="trailing" secondItem="Ulq-0V-5a2" secondAttribute="trailing" constant="25" id="WIm-of-yCr"/>
+                            <constraint firstItem="qe1-b2-RQ9" firstAttribute="bottom" secondItem="mTl-Qi-Xsf" secondAttribute="bottom" constant="50" id="inX-wS-A1p"/>
                             <constraint firstItem="mTl-Qi-Xsf" firstAttribute="leading" secondItem="qe1-b2-RQ9" secondAttribute="leading" id="mMG-zF-anM"/>
                             <constraint firstItem="qe1-b2-RQ9" firstAttribute="bottom" secondItem="Ulq-0V-5a2" secondAttribute="bottom" constant="35" id="n2P-Q5-JRR"/>
-                            <constraint firstItem="Ulq-0V-5a2" firstAttribute="top" secondItem="mTl-Qi-Xsf" secondAttribute="bottom" constant="15" id="vKc-1Q-yxn"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="TdF-Le-QNm"/>
@@ -289,67 +286,82 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iX4-JL-M3V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1311.5942028985507" y="1411.6071428571429"/>
+            <point key="canvasLocation" x="1419" y="1414"/>
         </scene>
         <!--Bibelstelle-->
-        <scene sceneID="QoQ-Mg-q36">
+        <scene sceneID="bWv-qB-hzI">
             <objects>
-                <viewController title="Bibelstelle" id="3S0-iK-9Uy" customClass="BibelstelleViewController" customModule="Novenen" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="czb-NE-18X">
+                <viewController id="6Hw-kd-wMj" customClass="BibelstelleViewController" customModule="Novenen" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FCH-4C-dg2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="M9D-qc-H63">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="738"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bible" translatesAutoresizingMaskIntoConstraints="NO" id="Mcr-W4-H5U">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="368.66666666666669"/>
-                                    </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kd5-B2-oCY">
-                                        <rect key="frame" x="0.0" y="369.66666666666674" width="414" height="368.33333333333326"/>
-                                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                        <color key="textColor" name="Color"/>
-                                        <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="25"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                </subviews>
-                            </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNx-XV-96f" userLabel="Button Bibelstelle Ziehen">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="biblePanorama1" translatesAutoresizingMaskIntoConstraints="NO" id="5vC-jX-a9O" userLabel="Image bible">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mCI-iA-eKb" userLabel="Opacity View">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <color key="backgroundColor" red="0.0" green="0.030363828538321112" blue="0.062950673729482376" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Dg-VX-i9l">
+                                <rect key="frame" x="15" y="441.33333333333326" width="384" height="296.66666666666674"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <mutableString key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium å pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <font key="NSFont" metaFont="system" size="24"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f25-2h-09f">
                                 <rect key="frame" x="114.33333333333333" y="753" width="185.33333333333337" height="35"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="35" id="6EK-CX-kQP"/>
+                                    <constraint firstAttribute="height" constant="35" id="cFl-Rg-yMV"/>
                                 </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="hand.tap.fill" catalog="system" title=" Bibelstelle ziehen">
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
+                                <buttonConfiguration key="configuration" style="plain" image="hand.tap.fill" catalog="system" title=" Bibelstelle ziehen"/>
                                 <connections>
-                                    <segue destination="rZe-il-yO0" kind="show" identifier="segueRandomBibelstelle" id="6R0-Ng-NUT"/>
+                                    <segue destination="rZe-il-yO0" kind="show" identifier="segueRandomBibelstelle" id="Gdm-Qy-3PG"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="oD2-ot-LGP"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Uhp-Pu-Igu"/>
                         <constraints>
-                            <constraint firstItem="M9D-qc-H63" firstAttribute="top" secondItem="czb-NE-18X" secondAttribute="top" id="ULL-69-iNv"/>
-                            <constraint firstItem="oD2-ot-LGP" firstAttribute="bottom" secondItem="fNx-XV-96f" secondAttribute="bottom" constant="25" id="WIF-Xc-jbZ"/>
-                            <constraint firstItem="M9D-qc-H63" firstAttribute="leading" secondItem="oD2-ot-LGP" secondAttribute="leading" id="ZgG-IB-mPG"/>
-                            <constraint firstItem="fNx-XV-96f" firstAttribute="top" secondItem="M9D-qc-H63" secondAttribute="bottom" constant="15" id="d4t-QA-Ct2"/>
-                            <constraint firstItem="oD2-ot-LGP" firstAttribute="trailing" secondItem="M9D-qc-H63" secondAttribute="trailing" id="fT4-Z3-NDf"/>
-                            <constraint firstItem="fNx-XV-96f" firstAttribute="centerX" secondItem="czb-NE-18X" secondAttribute="centerX" id="jQa-7j-hpW"/>
+                            <constraint firstItem="f25-2h-09f" firstAttribute="top" secondItem="6Dg-VX-i9l" secondAttribute="bottom" constant="15" id="2qw-kJ-NBE"/>
+                            <constraint firstItem="mCI-iA-eKb" firstAttribute="trailing" secondItem="Uhp-Pu-Igu" secondAttribute="trailing" id="908-fC-X9G"/>
+                            <constraint firstItem="mCI-iA-eKb" firstAttribute="leading" secondItem="Uhp-Pu-Igu" secondAttribute="leading" id="Asc-HQ-skO"/>
+                            <constraint firstItem="f25-2h-09f" firstAttribute="centerX" secondItem="FCH-4C-dg2" secondAttribute="centerX" id="Bzm-E9-LVh"/>
+                            <constraint firstItem="6Dg-VX-i9l" firstAttribute="leading" secondItem="Uhp-Pu-Igu" secondAttribute="leading" constant="15" id="CvJ-jT-gZC"/>
+                            <constraint firstItem="Uhp-Pu-Igu" firstAttribute="trailing" secondItem="6Dg-VX-i9l" secondAttribute="trailing" constant="15" id="Grk-hA-jW2"/>
+                            <constraint firstItem="5vC-jX-a9O" firstAttribute="leading" secondItem="Uhp-Pu-Igu" secondAttribute="leading" id="Jjy-nH-szR"/>
+                            <constraint firstItem="Uhp-Pu-Igu" firstAttribute="bottom" secondItem="f25-2h-09f" secondAttribute="bottom" constant="25" id="McO-22-xuv"/>
+                            <constraint firstItem="6Dg-VX-i9l" firstAttribute="top" secondItem="Uhp-Pu-Igu" secondAttribute="top" constant="300" id="NcD-gP-bwQ"/>
+                            <constraint firstAttribute="bottom" secondItem="5vC-jX-a9O" secondAttribute="bottom" id="Yiy-sP-WYx"/>
+                            <constraint firstItem="5vC-jX-a9O" firstAttribute="trailing" secondItem="Uhp-Pu-Igu" secondAttribute="trailing" id="ZFp-kK-PNW"/>
+                            <constraint firstItem="mCI-iA-eKb" firstAttribute="bottom" secondItem="Uhp-Pu-Igu" secondAttribute="bottom" id="cmc-GH-RQL"/>
+                            <constraint firstItem="mCI-iA-eKb" firstAttribute="top" secondItem="FCH-4C-dg2" secondAttribute="top" id="gyI-Qx-vuz"/>
+                            <constraint firstItem="5vC-jX-a9O" firstAttribute="top" secondItem="FCH-4C-dg2" secondAttribute="top" id="qZP-ip-SvK"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="LM3-tu-FyV"/>
+                    <navigationItem key="navigationItem" title="Bibelstelle" id="ev6-PV-0Ug"/>
                     <connections>
-                        <outlet property="buttonBibelstelleZiehen" destination="fNx-XV-96f" id="tZB-Rf-md1"/>
-                        <outlet property="textViewBibelzitat" destination="kd5-B2-oCY" id="Scl-pB-aW5"/>
+                        <outlet property="buttonBibelstelleZiehen" destination="f25-2h-09f" id="NBP-56-HV6"/>
+                        <outlet property="imageBible" destination="5vC-jX-a9O" id="gxx-j9-z2p"/>
+                        <outlet property="textViewBibelzitat" destination="6Dg-VX-i9l" id="YhM-Ap-im8"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NOd-cU-8tz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jeB-co-wnJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1311.5942028985507" y="714.50892857142856"/>
+            <point key="canvasLocation" x="1440.5797101449277" y="709.82142857142856"/>
         </scene>
         <!--Erinnerung-->
         <scene sceneID="d0r-0e-56z">
@@ -623,7 +635,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e80-OM-M2J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-823.1884057971015" y="714.50892857142856"/>
+            <point key="canvasLocation" x="-1035" y="715"/>
         </scene>
         <!--Navigation Controller Bibelstelle-->
         <scene sceneID="F1a-bu-62k">
@@ -643,18 +655,18 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="3S0-iK-9Uy" kind="relationship" relationship="rootViewController" id="HfO-oJ-1mf"/>
+                        <segue destination="6Hw-kd-wMj" kind="relationship" relationship="rootViewController" id="A7Z-wW-LPU"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xAH-x6-Rvf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="596" y="715"/>
+            <point key="canvasLocation" x="703" y="715"/>
         </scene>
     </scenes>
     <resources>
         <image name="arrowshape.turn.up.backward.fill" catalog="system" width="128" height="104"/>
         <image name="arrowshape.turn.up.forward.fill" catalog="system" width="128" height="104"/>
-        <image name="bible" width="1000" height="1128"/>
+        <image name="biblePanorama1" width="619" height="767"/>
         <image name="book" width="512" height="512"/>
         <image name="book.closed" catalog="system" width="115" height="128"/>
         <image name="bookmark" width="512" height="512"/>
@@ -666,9 +678,6 @@
         <image name="list.bullet.clipboard" catalog="system" width="103" height="128"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
-        <namedColor name="Color">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="little_green_old_paper">
             <color red="0.94901960784313721" green="0.93333333333333335" blue="0.79607843137254897" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
