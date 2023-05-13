@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,32 +12,51 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Novenen" textAlignment="center" lineBreakMode="middleTruncation" baselineAdjustment="alignBaselines" minimumFontSize="18" translatesAutoresizingMaskIntoConstraints="NO" id="GJd-Yh-RWb">
-                                <rect key="frame" x="125" y="314" width="125" height="39.5"/>
-                                <fontDescription key="fontDescription" name="AcademyEngravedLetPlain" family="Academy Engraved LET" pointSize="33"/>
-                                <color key="textColor" name="Color"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="biblePanorama12" translatesAutoresizingMaskIntoConstraints="NO" id="O7B-J0-HvH">
+                                <rect key="frame" x="0.0" y="-25" width="393" height="902"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wqx-pK-XIg">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="0.35311990700020696" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N O V E N E N" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2mZ-Go-EJ3">
+                                <rect key="frame" x="0.0" y="134" width="393" height="105"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.30408007893341266" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="105" id="D2I-JZ-Zlv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="GJd-Yh-RWb" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="jN4-RQ-Pl1"/>
-                            <constraint firstItem="GJd-Yh-RWb" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="xYb-XT-BNh"/>
+                            <constraint firstItem="Bcu-3y-fUS" firstAttribute="trailing" secondItem="2mZ-Go-EJ3" secondAttribute="trailing" id="47c-Gx-HcY"/>
+                            <constraint firstAttribute="bottom" secondItem="O7B-J0-HvH" secondAttribute="bottom" constant="-25" id="Cad-gC-2d8"/>
+                            <constraint firstItem="Wqx-pK-XIg" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="Dme-wo-yDI"/>
+                            <constraint firstAttribute="bottom" secondItem="Wqx-pK-XIg" secondAttribute="bottom" id="GOD-1z-7yu"/>
+                            <constraint firstItem="Wqx-pK-XIg" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" id="MmV-Jh-UPi"/>
+                            <constraint firstItem="2mZ-Go-EJ3" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="TbM-kP-fnO"/>
+                            <constraint firstItem="O7B-J0-HvH" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" id="XyK-c7-Nn5"/>
+                            <constraint firstItem="2mZ-Go-EJ3" firstAttribute="top" secondItem="Bcu-3y-fUS" secondAttribute="top" constant="75" id="dIp-vD-hQr"/>
+                            <constraint firstItem="2mZ-Go-EJ3" firstAttribute="leading" secondItem="Bcu-3y-fUS" secondAttribute="leading" id="eu9-Hq-da1"/>
+                            <constraint firstItem="O7B-J0-HvH" firstAttribute="trailing" secondItem="Bcu-3y-fUS" secondAttribute="trailing" id="mBB-P3-Njf"/>
+                            <constraint firstItem="O7B-J0-HvH" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="-25" id="vTc-pR-whc"/>
+                            <constraint firstItem="Wqx-pK-XIg" firstAttribute="trailing" secondItem="Bcu-3y-fUS" secondAttribute="trailing" id="z15-CY-8mq"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52.671755725190835" y="374.64788732394368"/>
+            <point key="canvasLocation" x="51.145038167938928" y="373.23943661971833"/>
         </scene>
     </scenes>
     <resources>
-        <namedColor name="Color">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
+        <image name="biblePanorama12" width="626" height="768"/>
     </resources>
 </document>
