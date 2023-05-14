@@ -1,17 +1,20 @@
-//
-//  ErinnerungViewController.swift
-//  Novenen
-//
-//  Created by Marina Komarek on 13.04.23.
-//
-
 import UIKit
+import UserNotifications
 
 class ErinnerungViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
     
     @IBOutlet weak var labelDatumNovene: UILabel!
     @IBOutlet weak var pickerNovenen: UIPickerView!
+    @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var buttonErinnerungBestaetigen: UIButton!
+    
+    var selectedNovene: String = "Fatima" //Default value "Fatima"
+    /*var selectedYear: Int = 0
+    var selectedMonth: Int = 0
+    var selectedDay: Int = 0
+    var selectedHour: Int = 0
+    var selectedMinute: Int = 0*/
+    var selectedDate = Date()
     
     var pickerData: [[String]] = [["Fatima", "5. bis 12. Mai"], ["Franz von Sales", "Novene zu Franz von Sales"], ["Göttliche Barmherzigkeit", "Karfreitag bis zum Vortag des Festes der göttlichen Barmherzigkeit (erster Sonntag nach Ostern)"], ["Heiliger Geist", "Von Christi Himmelfahrt bis Freitag vor Pfingsten"], ["Heiliger Josef", "10. bis 18. März"], ["Kostbares Blut", "Novene zum Kostbaren Blute Jesu Christi"], ["Lourdes", "Neun Tage vor einer Lourdes-Wallfahrt"], ["Medjugorje", "15. bis 24. Juni"], ["Mutter der immerwährenden Hilfe", "Eine Novene von P. Karl Jordan"], ["Sieben Zufluchten", "Novene zu den sieben Zufluchten"], ["Unbefleckte Empfängnis", "29. November bis 7. Dezember"]]
     
@@ -27,9 +30,61 @@ class ErinnerungViewController: UIViewController, UIPickerViewDelegate, UIPicker
         
         labelDatumNovene.text = pickerData[0][1]
 
-        // Do any additional setup after loading the view.
     }
     
+    @IBAction func erinnnerungBestaetigen(_ sender: Any) {
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd.MM.yyyy HH:mm"
+        let dateString = formatter.string(from: datePicker.date)
+        
+        let alertController = UIAlertController(title: "Erinnerung", message: "Soll eine Erinnerung an die Novene \(selectedNovene) am \(dateString) Uhr erfolgen?", preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "OK", style: .default) {
+            (action:UIAlertAction!) in
+            // Handle OK button action here
+            self.selectedDate = self.datePicker.date
+            let calendar = Calendar.current
+            // Create a date components object for the date and time you want to send the notification
+            var dateComponents = DateComponents()
+            dateComponents.year = calendar.component(.year, from: self.selectedDate)
+            print (dateComponents.year)
+            dateComponents.month = calendar.component(.month, from: self.selectedDate)
+            dateComponents.day = calendar.component(.day, from: self.selectedDate)
+            dateComponents.hour = calendar.component(.hour, from: self.selectedDate)
+            dateComponents.minute = calendar.component(.minute, from: self.selectedDate)
+            //print ("\(dateComponents.year) \(dateComponents.month) \(dateComponents.day) \(dateComponents.hour) \(dateComponents.minute)")
+            // Create a trigger for the notification based on the date components
+            let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+
+            // Create a content object for the notification
+            let content = UNMutableNotificationContent()
+            content.title = "Novene \(self.selectedNovene)"
+            content.body = "Die Novene beginnt heute!"
+            content.sound = UNNotificationSound.default
+
+            // Create a request for the notification
+            let request = UNNotificationRequest(identifier: "NovenenErinnerung", content: content, trigger: trigger)
+
+            // Add the request to the notification center
+            UNUserNotificationCenter.current().add(request) { error in
+                if let error = error {
+                    // Handle the error
+                } else {
+                    // Notification was successfully scheduled
+                }
+            }
+        }
+        
+        let CancelAction = UIAlertAction(title: "Abbrechen", style: .default)
+        
+        alertController.addAction(okAction)
+        alertController.addAction(CancelAction)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    //PickerView mit Novenen-Namen
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -44,5 +99,7 @@ class ErinnerungViewController: UIViewController, UIPickerViewDelegate, UIPicker
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         labelDatumNovene.text = pickerData[row][1]
+        selectedNovene = pickerData[row][0]
+        print (selectedNovene)
     }
 }

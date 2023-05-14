@@ -385,7 +385,7 @@
                             <pickerView contentMode="scaleToFill" verticalHuggingPriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="Z3H-Qd-gMU">
                                 <rect key="frame" x="0.0" y="259" width="393" height="216"/>
                             </pickerView>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="5PD-ZB-qce">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="5PD-ZB-qce">
                                 <rect key="frame" x="0.0" y="478" width="393" height="216"/>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tQo-eP-SUA" userLabel="Button Bestätigen">
@@ -397,6 +397,9 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="hand.tap.fill" catalog="system" title=" Erinnerung bestätigen"/>
+                                <connections>
+                                    <action selector="erinnnerungBestaetigen:" destination="48D-Tq-NEy" eventType="touchUpInside" id="CU5-XI-Yq0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="S2j-Oj-OF2"/>
@@ -423,6 +426,7 @@
                     <tabBarItem key="tabBarItem" title="Erinnerung" image="calendar" catalog="system" id="oJg-cV-CbP"/>
                     <connections>
                         <outlet property="buttonErinnerungBestaetigen" destination="tQo-eP-SUA" id="KJg-26-QnY"/>
+                        <outlet property="datePicker" destination="5PD-ZB-qce" id="hag-fP-Jvc"/>
                         <outlet property="labelDatumNovene" destination="HUW-5v-KBz" id="YOm-5U-zqB"/>
                         <outlet property="pickerNovenen" destination="Z3H-Qd-gMU" id="agr-o4-Siw"/>
                     </connections>
@@ -668,8 +672,8 @@
         <image name="biblePanorama1" width="619" height="767"/>
         <image name="book" width="512" height="512"/>
         <image name="book.closed" catalog="system" width="115" height="128"/>
-        <image name="bookmark" width="512" height="512"/>
         <image name="bookmark" catalog="system" width="110" height="128"/>
+        <image name="bookmark" width="512" height="512"/>
         <image name="calendar" catalog="system" width="128" height="107"/>
         <image name="calender" width="512" height="512"/>
         <image name="hand.tap.fill" catalog="system" width="115" height="128"/>
