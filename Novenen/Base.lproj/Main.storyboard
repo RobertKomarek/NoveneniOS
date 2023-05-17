@@ -181,7 +181,7 @@
                                 <color key="backgroundColor" name="parchment_paper"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -573,14 +573,113 @@
                     <view key="view" contentMode="scaleToFill" id="l65-JX-Qxx">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="769"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R3k-Ah-aDi">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="N O V E N E N" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qe2-fR-nmP">
+                                        <rect key="frame" x="107" y="15" width="179" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Design und Programmierung:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T9W-nK-eWE">
+                                        <rect key="frame" x="85.333333333333329" y="66" width="222.66666666666669" height="20.333333333333329"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vel-jO-epg">
+                                        <rect key="frame" x="110.66666666666667" y="101.33333333333334" width="171.66666666666663" height="28"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="robert.komarek@gmail.com">
+                                                    <attributes>
+                                                        <font key="NSFont" size="12" name="Helvetica"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        <integer key="NSUnderline" value="1"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Lizenzen siehe jeweilige Info zur Novene!" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dKd-c4-iQs">
+                                        <rect key="frame" x="15" y="144.33333333333334" width="363" height="66"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="66" id="EGX-5k-UhZ"/>
+                                        </constraints>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Schriftgröße ändern:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1RL-Wa-qmJ">
+                                        <rect key="frame" x="15" y="354.66666666666669" width="157.66666666666666" height="20.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Lbe-pO-pvF">
+                                        <rect key="frame" x="15" y="390" width="363" height="310"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="310" id="Qi4-Iv-T5E"/>
+                                        </constraints>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <color key="textColor" systemColor="labelColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="qkC-hz-7Lh">
+                                        <rect key="frame" x="284" y="343" width="94" height="32"/>
+                                        <connections>
+                                            <action selector="stepperSchriftgroesseClicked:" destination="mM6-Xc-Tia" eventType="valueChanged" id="tex-lv-nGV"/>
+                                        </connections>
+                                    </stepper>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Lbe-pO-pvF" firstAttribute="bottom" secondItem="R3k-Ah-aDi" secondAttribute="bottomMargin" id="0bl-Tz-fKS"/>
+                                    <constraint firstItem="vGe-WZ-aXC" firstAttribute="trailing" secondItem="dKd-c4-iQs" secondAttribute="trailing" constant="15" id="1Lh-po-iqZ"/>
+                                    <constraint firstItem="Lbe-pO-pvF" firstAttribute="leading" secondItem="vGe-WZ-aXC" secondAttribute="leading" constant="15" id="1bF-lX-tVB"/>
+                                    <constraint firstItem="vel-jO-epg" firstAttribute="top" secondItem="T9W-nK-eWE" secondAttribute="bottom" constant="15" id="6Lc-Wr-ToY"/>
+                                    <constraint firstItem="Lbe-pO-pvF" firstAttribute="top" secondItem="qkC-hz-7Lh" secondAttribute="bottom" constant="15" id="6VG-4P-d9B"/>
+                                    <constraint firstItem="vGe-WZ-aXC" firstAttribute="bottom" secondItem="Lbe-pO-pvF" secondAttribute="bottom" constant="10" id="A40-1L-Hjt"/>
+                                    <constraint firstAttribute="trailing" secondItem="dKd-c4-iQs" secondAttribute="trailing" constant="15" id="HDM-FC-Tt2"/>
+                                    <constraint firstItem="vGe-WZ-aXC" firstAttribute="trailing" secondItem="Lbe-pO-pvF" secondAttribute="trailing" constant="15" id="PQ3-bn-7T1"/>
+                                    <constraint firstItem="dKd-c4-iQs" firstAttribute="leading" secondItem="vGe-WZ-aXC" secondAttribute="leading" constant="15" id="QyJ-hc-fr3"/>
+                                    <constraint firstItem="1RL-Wa-qmJ" firstAttribute="leading" secondItem="vGe-WZ-aXC" secondAttribute="leading" constant="15" id="RVG-d4-1hL"/>
+                                    <constraint firstItem="vel-jO-epg" firstAttribute="centerX" secondItem="R3k-Ah-aDi" secondAttribute="centerX" id="XRb-Nu-4ql"/>
+                                    <constraint firstItem="qe2-fR-nmP" firstAttribute="centerX" secondItem="R3k-Ah-aDi" secondAttribute="centerX" id="cQN-fY-HHU"/>
+                                    <constraint firstItem="T9W-nK-eWE" firstAttribute="top" secondItem="qe2-fR-nmP" secondAttribute="bottom" constant="15" id="idK-ya-8hm"/>
+                                    <constraint firstItem="T9W-nK-eWE" firstAttribute="centerX" secondItem="R3k-Ah-aDi" secondAttribute="centerX" id="nZF-Xn-ziu"/>
+                                    <constraint firstItem="Lbe-pO-pvF" firstAttribute="top" secondItem="1RL-Wa-qmJ" secondAttribute="bottom" constant="15" id="oBv-4B-rBZ"/>
+                                    <constraint firstItem="dKd-c4-iQs" firstAttribute="top" secondItem="vel-jO-epg" secondAttribute="bottom" constant="15" id="rQ1-fu-Xj5"/>
+                                    <constraint firstAttribute="trailing" secondItem="qkC-hz-7Lh" secondAttribute="trailing" constant="15" id="udk-ST-4d4"/>
+                                    <constraint firstItem="qe2-fR-nmP" firstAttribute="top" secondItem="R3k-Ah-aDi" secondAttribute="top" constant="15" id="wyI-uS-pgj"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="zWM-d5-K21"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="vGe-WZ-aXC"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="DZT-93-wzx"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="R3k-Ah-aDi" firstAttribute="leading" secondItem="DZT-93-wzx" secondAttribute="leading" id="JQs-lZ-6lY"/>
+                            <constraint firstItem="R3k-Ah-aDi" firstAttribute="top" secondItem="DZT-93-wzx" secondAttribute="top" id="JYU-tp-NcL"/>
+                            <constraint firstItem="R3k-Ah-aDi" firstAttribute="trailing" secondItem="DZT-93-wzx" secondAttribute="trailing" id="JZc-Wr-B5n"/>
+                            <constraint firstItem="R3k-Ah-aDi" firstAttribute="bottom" secondItem="DZT-93-wzx" secondAttribute="bottom" id="rPY-ug-r85"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Impressum" image="info.square" catalog="system" id="Ln1-oS-0fh"/>
+                    <size key="freeformSize" width="393" height="852"/>
+                    <connections>
+                        <outlet property="textViewBeispieltext" destination="Lbe-pO-pvF" id="ZaU-RD-B8z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zDZ-Sq-vUl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3884" y="715"/>
+            <point key="canvasLocation" x="3883.2061068702287" y="714.78873239436621"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="dPk-Nl-2mL">
@@ -689,6 +788,9 @@
         <namedColor name="parchment_paper">
             <color red="0.93725490196078431" green="0.89803921568627454" blue="0.83529411764705885" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

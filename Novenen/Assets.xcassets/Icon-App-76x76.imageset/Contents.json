@@ -1,11 +1,12 @@
 {
   "images" : [
     {
-      "filename" : "kostbaresblut4.jpg",
+      "filename" : "Icon-App-76x76@1x.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Icon-App-76x76@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
