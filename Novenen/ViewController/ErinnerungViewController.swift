@@ -1,7 +1,7 @@
 import UIKit
 import UserNotifications
 
-class ErinnerungViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
+class ErinnerungViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UNUserNotificationCenterDelegate {
     
     @IBOutlet weak var labelDatumNovene: UILabel!
     @IBOutlet weak var pickerNovenen: UIPickerView!
@@ -9,11 +9,6 @@ class ErinnerungViewController: UIViewController, UIPickerViewDelegate, UIPicker
     @IBOutlet weak var buttonErinnerungBestaetigen: UIButton!
     
     var selectedNovene: String = "Fatima" //Default value "Fatima"
-    /*var selectedYear: Int = 0
-    var selectedMonth: Int = 0
-    var selectedDay: Int = 0
-    var selectedHour: Int = 0
-    var selectedMinute: Int = 0*/
     var selectedDate = Date()
     
     var pickerData: [[String]] = [["Fatima", "5. bis 12. Mai"], ["Franz von Sales", "Novene zu Franz von Sales"], ["Göttliche Barmherzigkeit", "Karfreitag bis zum Vortag des Festes der göttlichen Barmherzigkeit (erster Sonntag nach Ostern)"], ["Heiliger Geist", "Von Christi Himmelfahrt bis Freitag vor Pfingsten"], ["Heiliger Josef", "10. bis 18. März"], ["Kostbares Blut", "Novene zum Kostbaren Blute Jesu Christi"], ["Lourdes", "Neun Tage vor einer Lourdes-Wallfahrt"], ["Medjugorje", "15. bis 24. Juni"], ["Mutter der immerwährenden Hilfe", "Eine Novene von P. Karl Jordan"], ["Sieben Zufluchten", "Novene zu den sieben Zufluchten"], ["Unbefleckte Empfängnis", "29. November bis 7. Dezember"]]
@@ -25,11 +20,32 @@ class ErinnerungViewController: UIViewController, UIPickerViewDelegate, UIPicker
         pickerNovenen.delegate = self
         pickerNovenen.dataSource = self
         
+        UNUserNotificationCenter.current().delegate = self
+        
         buttonErinnerungBestaetigen.layer.cornerRadius = 10
         buttonErinnerungBestaetigen.clipsToBounds = true
         
         labelDatumNovene.text = pickerData[0][1]
-
+        
+        // Request permission for notifications
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (granted, error) in
+            if granted {
+                print("acces granted")
+            } else {
+                print("acces NOT granted")
+                 /*let alertController = UIAlertController(title: "Info", message: "Es können keine Erinnerungen zu Beginn der jeweiligen Novene erfolgen. Sind Sie sich sicher?", preferredStyle: .alert)
+                
+                let JaAction = UIAlertAction(title: "JA", style: .default)
+                
+                let NeinAction = UIAlertAction(title: "NEIN", style: .default) {
+                    (action:UIAlertAction!) in }
+                
+                alertController.addAction(JaAction)
+                alertController.addAction(NeinAction)
+                self.present(alertController, animated: true, completion: nil)*/
+            }
+        }
+        
     }
     
     @IBAction func erinnnerungBestaetigen(_ sender: Any) {
@@ -48,7 +64,6 @@ class ErinnerungViewController: UIViewController, UIPickerViewDelegate, UIPicker
             // Create a date components object for the date and time you want to send the notification
             var dateComponents = DateComponents()
             dateComponents.year = calendar.component(.year, from: self.selectedDate)
-            print (dateComponents.year)
             dateComponents.month = calendar.component(.month, from: self.selectedDate)
             dateComponents.day = calendar.component(.day, from: self.selectedDate)
             dateComponents.hour = calendar.component(.hour, from: self.selectedDate)
@@ -59,12 +74,21 @@ class ErinnerungViewController: UIViewController, UIPickerViewDelegate, UIPicker
 
             // Create a content object for the notification
             let content = UNMutableNotificationContent()
-            content.title = "Novene \(self.selectedNovene)"
-            content.body = "Die Novene beginnt heute!"
+            content.title = "Novenen"
+            content.body = "Die Novene \(self.selectedNovene) beginnt heute!"
             content.sound = UNNotificationSound.default
+            // Get the system image for the icon
+            /*let iconName = "pigeon"
+            guard let iconURL = Bundle.main.url(forResource: iconName, withExtension: "png", subdirectory: "Assets.xcassets") else { return }
+            // Create a notification attachment with the image
+            if let attachment = try? UNNotificationAttachment(identifier: "iconAttachment", url: iconURL, options: nil) {
+                // Set the attachment as the notification's icon
+                content.attachments = [attachment]
+            }*/
+          
 
             // Create a request for the notification
-            let request = UNNotificationRequest(identifier: "NovenenErinnerung", content: content, trigger: trigger)
+            let request = UNNotificationRequest(identifier: "novenenErinnerung", content: content, trigger: trigger)
 
             // Add the request to the notification center
             UNUserNotificationCenter.current().add(request) { error in
