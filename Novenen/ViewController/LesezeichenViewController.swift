@@ -23,25 +23,26 @@ class LesezeichenViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var buttonLesezeichenHinzufuegen: UIButton!
     @IBOutlet weak var tableViewBookmarks: UITableView!
     
-    @IBAction func stepperTagClicked(_ sender: Any, forEvent event: UIEvent) {
+    @IBAction func stepperTagClicked(_ sender: UIStepper, forEvent event: UIEvent) {
         
-        let clickedStepper = sender as! UIStepper
+        let stepper = sender
+        
         if lesezeichenDefaults.count != 0 {
-            var currentDay = lesezeichenDefaults[clickedStepper.tag].Tag
+            var currentDay = lesezeichenDefaults[stepper.tag].Tag
             
-            if clickedStepper.value == 0.0 && currentDay >= 2 {
+            if stepper.value == 0.0 && currentDay >= 2 {
                 currentDay = currentDay - 1
                 
-                lesezeichenDefaults[clickedStepper.tag].Tag = currentDay
+                lesezeichenDefaults[stepper.tag].Tag = currentDay
                 
                 tableViewBookmarks.reloadData()
                 
                 try? UserDefaults.standard.set(PropertyListEncoder().encode(lesezeichenDefaults), forKey: "Lesezeichen")
             }
             
-            if clickedStepper.value == 1.0 && currentDay < 9 {
+            if stepper.value == 1.0 && currentDay < 9 {
                 currentDay = currentDay + 1
-                lesezeichenDefaults[clickedStepper.tag].Tag = currentDay
+                lesezeichenDefaults[stepper.tag].Tag = currentDay
                 
                 tableViewBookmarks.reloadData()
                 

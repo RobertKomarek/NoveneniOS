@@ -8,44 +8,63 @@
 import UIKit
 
 class ImpressumViewController: UIViewController {
-
+    
     @IBOutlet weak var textViewBeispieltext: UITextView!
     
-    @IBAction func stepperSchriftgroesseClicked(_ sender: Any) {
+    @IBAction func stepperFontsizeChangedClicked(_ sender: UIStepper, forEvent event: UIEvent) {
         
-        let stepper = sender as! UIStepper
-        print(stepper.value)
-        print(stepper.minimumValue)
-        print(stepper.maximumValue)
-        
-        if stepper.value < stepper.minimumValue {
-            //get current Font Size of Example Text
-            if let font = textViewBeispieltext.font {
-                var fontSize = font.pointSize
-                fontSize = fontSize - 1.0
-                // Create a new UIFont object with the desired font size
-                let newFont = textViewBeispieltext.font?.withSize(fontSize)
+        if UserDefaults.standard.object(forKey: "Fontsize") != nil {
+            var defaultFontsize = UserDefaults.standard.double(forKey: "Fontsize")
+            // Create a new UIFont object with the desired font size
+            let newFont = textViewBeispieltext.font?.withSize(defaultFontsize)
+            textViewBeispieltext.font = newFont
+            //print(defaultFontsize)
+            
+            if sender.value == 1.0 {
+                // Plus button was clicked
+                defaultFontsize = defaultFontsize + 1.0
+                let newFont = textViewBeispieltext.font?.withSize(defaultFontsize)
                 textViewBeispieltext.font = newFont
+                UserDefaults.standard.set(defaultFontsize, forKey: "Fontsize")
+            }
+            
+            if sender.value == -1.0 {
+                // Minus button was clicked
+                defaultFontsize = defaultFontsize - 1.0
+                let newFont = textViewBeispieltext.font?.withSize(defaultFontsize)
+                textViewBeispieltext.font = newFont
+                UserDefaults.standard.set(defaultFontsize, forKey: "Fontsize")
+            }
+        } else {
+            var defaultFontsize = 24.0 //default Fontsize
+            if sender.value == 1.0 {
+                // Plus button was clicked
+                defaultFontsize = defaultFontsize + 1.0
+                let newFont = textViewBeispieltext.font?.withSize(defaultFontsize)
+                textViewBeispieltext.font = newFont
+                UserDefaults.standard.set(defaultFontsize, forKey: "Fontsize")
+            }
+            
+            if sender.value == -1.0 {
+                // Minus button was clicked
+                defaultFontsize = defaultFontsize - 1.0
+                let newFont = textViewBeispieltext.font?.withSize(defaultFontsize)
+                textViewBeispieltext.font = newFont
+                UserDefaults.standard.set(defaultFontsize, forKey: "Fontsize")
             }
         }
-        
-        if stepper.value > stepper.maximumValue {
-            //get current Font Size of Example Text
-            if let font = textViewBeispieltext.font {
-                var fontSize = font.pointSize
-                //print("current fontsize: \(fontSize)")
-                fontSize = fontSize + 1.0
-                //print("new fontsize: \(fontSize)")
-                // Create a new UIFont object with the desired font size
-                let newFont = textViewBeispieltext.font?.withSize(fontSize)
-                textViewBeispieltext.font = newFont
-            }
-        }
-        
+        // Update the stepper's tag with the current value for the next comparison
+        sender.value = 0.0
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if UserDefaults.standard.object(forKey: "Fontsize") != nil {
+            var defaultFontsize = UserDefaults.standard.double(forKey: "Fontsize")
+            // Create a new UIFont object with the desired font size
+            let newFont = textViewBeispieltext.font?.withSize(defaultFontsize)
+            textViewBeispieltext.font = newFont
+        }
     }
 }

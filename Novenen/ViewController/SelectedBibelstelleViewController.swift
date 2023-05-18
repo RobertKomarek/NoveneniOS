@@ -36,6 +36,12 @@ class SelectedBibelstelleViewController: UIViewController {
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        let fontSize = UserDefaults.standard.double(forKey: "Fontsize")
+        let newFont = textViewKapiteltext.font?.withSize(fontSize)
+        textViewKapiteltext.font = newFont
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

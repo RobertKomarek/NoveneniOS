@@ -14,6 +14,12 @@ class LitaneiViewController: UIViewController {
 
     @IBOutlet weak var textViewLitanei: UITextView!
     
+    override func viewDidAppear(_ animated: Bool) {
+        let fontSize = UserDefaults.standard.double(forKey: "Fontsize")
+        let newFont = textViewLitanei.font?.withSize(fontSize)
+        textViewLitanei.font = newFont
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
