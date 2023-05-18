@@ -30,7 +30,7 @@ class LesezeichenViewController: UIViewController, UITableViewDelegate, UITableV
         if lesezeichenDefaults.count != 0 {
             var currentDay = lesezeichenDefaults[stepper.tag].Tag
             
-            if stepper.value == 0.0 && currentDay >= 2 {
+            if stepper.value == -1.0 && currentDay >= 2 {
                 currentDay = currentDay - 1
                 
                 lesezeichenDefaults[stepper.tag].Tag = currentDay
@@ -48,6 +48,8 @@ class LesezeichenViewController: UIViewController, UITableViewDelegate, UITableV
                 
                 try? UserDefaults.standard.set(PropertyListEncoder().encode(lesezeichenDefaults), forKey: "Lesezeichen")
             }
+            
+            stepper.value = 0.0
         }
     }
     

@@ -1,15 +1,24 @@
-//
-//  ImpressumViewController.swift
-//  Novenen
-//
-//  Created by Marina Komarek on 27.03.23.
-//
-
 import UIKit
+import MessageUI
 
-class ImpressumViewController: UIViewController {
+class ImpressumViewController: UIViewController, MFMailComposeViewControllerDelegate {
     
+    
+    @IBOutlet weak var labelMailAddress: UILabel!
     @IBOutlet weak var textViewBeispieltext: UITextView!
+    @IBAction func tapGestureMailAddress(_ sender: Any) {
+        if MFMailComposeViewController.canSendMail() {
+            let mailComposeVC = MFMailComposeViewController()
+            mailComposeVC.mailComposeDelegate = self
+            mailComposeVC.setToRecipients(["robert.komarek98@gmail.com"])
+            mailComposeVC.setSubject("Novenen-App für iOS")
+            mailComposeVC.setMessageBody("Anfrage zur Novenen-App", isHTML: false)
+            
+            present(mailComposeVC, animated: true, completion: nil)
+        } else {
+            print("Mail-Service not available!")
+        }
+    }
     
     @IBAction func stepperFontsizeChangedClicked(_ sender: UIStepper, forEvent event: UIEvent) {
         
@@ -67,4 +76,28 @@ class ImpressumViewController: UIViewController {
             textViewBeispieltext.font = newFont
         }
     }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        // Dismiss the mail compose view controller when finished
+        controller.dismiss(animated: true, completion: nil)
+        
+        // Handle the result of the email composition if needed
+        switch result {
+        case .cancelled:
+            // Email composition was cancelled
+            break
+        case .sent:
+            // Email was sent successfully
+            break
+        case .saved:
+            // Email was saved as a draft
+            break
+        case .failed:
+            // Email failed to send
+            break
+        default:
+            break
+        }
+    }
+
 }

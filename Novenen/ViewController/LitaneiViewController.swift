@@ -13,8 +13,8 @@ class LitaneiViewController: UIViewController {
     var litaneiUeberschrift:String?
 
     @IBOutlet weak var textViewLitanei: UITextView!
-    
-    override func viewDidAppear(_ animated: Bool) {
+   
+    override func viewWillAppear(_ animated: Bool) {
         let fontSize = UserDefaults.standard.double(forKey: "Fontsize")
         let newFont = textViewLitanei.font?.withSize(fontSize)
         textViewLitanei.font = newFont
@@ -26,18 +26,5 @@ class LitaneiViewController: UIViewController {
         self.navigationItem.title = litaneiUeberschrift
         textViewLitanei.text = litanei
 
-        // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

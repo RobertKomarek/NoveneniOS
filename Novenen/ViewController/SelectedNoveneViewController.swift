@@ -35,15 +35,13 @@ class SelectedNoveneViewController: UIViewController, UIPickerViewDataSource, UI
         buttonGoToLitanei.isHidden = true
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         //Change text of Back Button
         navigationItem.backBarButtonItem = UIBarButtonItem(title: passedNovene[0].Novenenname, style: UIBarButtonItem.Style.plain, target: nil, action: nil)
-        
         
             let fontSize = UserDefaults.standard.double(forKey: "Fontsize")
             let newFont = textViewNovene.font?.withSize(fontSize)
             textViewNovene.font = newFont
-        
     }
     
 
