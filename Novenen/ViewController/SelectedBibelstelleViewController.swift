@@ -1,4 +1,5 @@
 import UIKit
+import AVFoundation 
 
 class SelectedBibelstelleViewController: UIViewController {
     
@@ -9,12 +10,43 @@ class SelectedBibelstelleViewController: UIViewController {
     var Kapitel : String?
     var KapitelText : String?
     var randomInt : Int = 0
-    
+   
+    @IBOutlet weak var buttonReadAloud: UIButton!
     @IBOutlet weak var textViewKapiteltext: UITextView!
     @IBOutlet weak var labelKapitel: UILabel!
     @IBOutlet weak var labelBuch: UILabel!
     @IBOutlet weak var buttonKapitelVor: UIButton!
     @IBOutlet weak var buttonKapitelZurueck: UIButton!
+    
+    @IBAction func readTextAloud(_ sender: Any) {
+        /*let germanVoice = AVSpeechSynthesisVoice(language: "de-DE")
+        if germanVoice == nil {
+            print("German voice not available")
+        } else {
+            print("German voice is available")
+        }
+        
+        if #available(iOS 10.0, *) {
+            if AVSpeechSynthesisVoice.self != nil {
+                print("Speech synthesis is supported on this device.")
+            } else {
+                print("Speech synthesis is not supported on this device.")
+            }
+        } else {
+            print("Speech synthesis is not supported on this device.")
+        }*/
+
+        guard let text = textViewKapiteltext.text else { return }
+            let speechSynthesizer = AVSpeechSynthesizer()
+            let speechUtterance = AVSpeechUtterance(string: text)
+            
+            // Set the desired speech settings (optional)
+            speechUtterance.rate = AVSpeechUtteranceDefaultSpeechRate
+            speechUtterance.voice = AVSpeechSynthesisVoice(language: "de-DE")
+            
+            // Speak the text
+            speechSynthesizer.speak(speechUtterance)
+    }
     
     @IBAction func buttonKapitelVorClicked() {
         if randomInt < randomBibelstelle.count {
