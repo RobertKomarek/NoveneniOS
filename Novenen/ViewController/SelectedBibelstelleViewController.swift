@@ -55,6 +55,7 @@ class SelectedBibelstelleViewController: UIViewController {
             labelBuch.text = randomBibelstelle[randomInt].Buch
             labelKapitel.text = randomBibelstelle[randomInt].Kapitel
             textViewKapiteltext.text = randomBibelstelle[randomInt].Kapiteltext
+            textViewKapiteltext.scrollRangeToVisible(NSRange(location: 0, length: 0))
         }
     }
     
@@ -65,6 +66,7 @@ class SelectedBibelstelleViewController: UIViewController {
             labelBuch.text = randomBibelstelle[randomInt].Buch
             labelKapitel.text = randomBibelstelle[randomInt].Kapitel
             textViewKapiteltext.text = randomBibelstelle[randomInt].Kapiteltext
+            textViewKapiteltext.scrollRangeToVisible(NSRange(location: 0, length: 0))
         }
     }
     
@@ -72,15 +74,17 @@ class SelectedBibelstelleViewController: UIViewController {
         let fontSize = UserDefaults.standard.double(forKey: "Fontsize")
         let newFont = textViewKapiteltext.font?.withSize(fontSize)
         textViewKapiteltext.font = newFont
+        //textViewKapiteltext.scrollRangeToVisible(NSRange(location: 0, length: 0))
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         labelKapitel.numberOfLines = 0
-        [labelKapitel.sizeToFit]
+        labelKapitel.sizeToFit()
+        //[labelKapitel.sizeToFit]
         labelBuch.numberOfLines = 0
-        [labelBuch.sizeToFit]
+        labelBuch.sizeToFit()
         
         buttonKapitelVor.layer.cornerRadius = 10
         buttonKapitelZurueck.layer.cornerRadius = 10

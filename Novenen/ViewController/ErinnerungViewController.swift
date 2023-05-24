@@ -124,6 +124,7 @@ class ErinnerungViewController: UIViewController, UIPickerViewDelegate, UIPicker
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         labelDatumNovene.text = pickerData[row][1]
         selectedNovene = pickerData[row][0]
-        print (selectedNovene)
+        
+        
     }
 }

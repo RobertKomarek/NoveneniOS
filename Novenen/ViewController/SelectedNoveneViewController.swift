@@ -1,4 +1,5 @@
 import UIKit
+import AVFoundation
 
 class SelectedNoveneViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, UIScrollViewDelegate, UITextViewDelegate {
     
@@ -10,6 +11,21 @@ class SelectedNoveneViewController: UIViewController, UIPickerViewDataSource, UI
     @IBOutlet weak var labelTagesueberschrift: UILabel!
     @IBOutlet weak var buttonGoToLitanei: UIButton!
     
+    @IBOutlet weak var buttonReadAloudText: UIButton!
+    
+    @IBAction func readAloudText(_ sender: Any) {
+        guard let text = textViewNovene.text else { return }
+            let speechSynthesizer = AVSpeechSynthesizer()
+            let speechUtterance = AVSpeechUtterance(string: text)
+            
+            // Set the desired speech settings (optional)
+            speechUtterance.rate = AVSpeechUtteranceDefaultSpeechRate
+            speechUtterance.voice = AVSpeechSynthesisVoice(language: "de-DE")
+            
+            // Speak the text
+            speechSynthesizer.speak(speechUtterance)
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,6 +58,16 @@ class SelectedNoveneViewController: UIViewController, UIPickerViewDataSource, UI
             let fontSize = UserDefaults.standard.double(forKey: "Fontsize")
             let newFont = textViewNovene.font?.withSize(fontSize)
             textViewNovene.font = newFont
+        
+        //check if textview scrolled to end/bottom
+        func scrollViewDidScroll(_ scrollView: UIScrollView) {
+            
+            if (scrollView.contentOffset.y >= scrollView.contentSize.height - (scrollView.frame.size.height + 50) && selectedRow != 0 && passedNovene[1].Litanei?.isEmpty == false) {
+                buttonGoToLitanei.isHidden = false
+            } else {
+                buttonGoToLitanei.isHidden = true
+            }
+        }
     }
     
 
@@ -66,6 +92,7 @@ class SelectedNoveneViewController: UIViewController, UIPickerViewDataSource, UI
         labelTagesueberschrift.sizeToFit()
         
         textViewNovene.text = passedNovene[row].Tagestext! + "\n\n"
+        textViewNovene.scrollRangeToVisible(NSRange(location: 0, length: 0))
         
         buttonGoToLitanei.setTitle(passedNovene[row].Litaneiueberschrift, for: .normal)
         print(self.textViewNovene.contentSize.height)
