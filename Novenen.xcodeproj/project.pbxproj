@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		84085FF92A1C0CA9008FE8F3 /* Novenen.json in Resources */ = {isa = PBXBuildFile; fileRef = 84085FF82A1C0CA8008FE8F3 /* Novenen.json */; };
 		841227B429D9C8CB000C5645 /* BibelStelle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841227B329D9C8CB000C5645 /* BibelStelle.swift */; };
 		841227B629D9C8F9000C5645 /* Einheitsuebersetzung1980.json in Resources */ = {isa = PBXBuildFile; fileRef = 841227B529D9C8F9000C5645 /* Einheitsuebersetzung1980.json */; };
 		841227B929D9D4CE000C5645 /* DeviceKit in Frameworks */ = {isa = PBXBuildFile; productRef = 841227B829D9D4CE000C5645 /* DeviceKit */; };
@@ -15,6 +14,7 @@
 		841C001D29E802C400037F76 /* ErinnerungViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 841C001C29E802C400037F76 /* ErinnerungViewController.swift */; };
 		843B166329D72F01009B1765 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 843B166229D72F01009B1765 /* Launch Screen.storyboard */; };
 		843B166729D73446009B1765 /* SelectedNoveneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B166629D73446009B1765 /* SelectedNoveneViewController.swift */; };
+		84964AE52A23D7AE00F519F7 /* Novenen.json in Resources */ = {isa = PBXBuildFile; fileRef = 84964AE42A23D7AE00F519F7 /* Novenen.json */; };
 		8499CC8D29D1CF52008F7078 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8499CC8C29D1CF52008F7078 /* AppDelegate.swift */; };
 		8499CC8F29D1CF52008F7078 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8499CC8E29D1CF52008F7078 /* SceneDelegate.swift */; };
 		8499CC9429D1CF52008F7078 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8499CC9229D1CF52008F7078 /* Main.storyboard */; };
@@ -49,13 +49,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		84085FF82A1C0CA8008FE8F3 /* Novenen.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Novenen.json; sourceTree = "<group>"; };
 		841227B329D9C8CB000C5645 /* BibelStelle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BibelStelle.swift; sourceTree = "<group>"; };
 		841227B529D9C8F9000C5645 /* Einheitsuebersetzung1980.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Einheitsuebersetzung1980.json; sourceTree = "<group>"; };
 		8415CCDA29DC28C70066860E /* SelectedBibelstelleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedBibelstelleViewController.swift; sourceTree = "<group>"; };
 		841C001C29E802C400037F76 /* ErinnerungViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErinnerungViewController.swift; sourceTree = "<group>"; };
 		843B166229D72F01009B1765 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		843B166629D73446009B1765 /* SelectedNoveneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedNoveneViewController.swift; sourceTree = "<group>"; };
+		84964AE42A23D7AE00F519F7 /* Novenen.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Novenen.json; sourceTree = "<group>"; };
 		8499CC8929D1CF52008F7078 /* Novenen.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Novenen.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8499CC8C29D1CF52008F7078 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8499CC8E29D1CF52008F7078 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,7 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				841227B529D9C8F9000C5645 /* Einheitsuebersetzung1980.json */,
-				84085FF82A1C0CA8008FE8F3 /* Novenen.json */,
+				84964AE42A23D7AE00F519F7 /* Novenen.json */,
 				84FD3B0029D75CDD00130079 /* Models */,
 				8499CCBC29D1D447008F7078 /* ViewController */,
 				8499CC8C29D1CF52008F7078 /* AppDelegate.swift */,
@@ -293,7 +293,7 @@
 			files = (
 				8499CC9629D1CF53008F7078 /* Assets.xcassets in Resources */,
 				8499CC9429D1CF52008F7078 /* Main.storyboard in Resources */,
-				84085FF92A1C0CA9008FE8F3 /* Novenen.json in Resources */,
+				84964AE52A23D7AE00F519F7 /* Novenen.json in Resources */,
 				843B166329D72F01009B1765 /* Launch Screen.storyboard in Resources */,
 				841227B629D9C8F9000C5645 /* Einheitsuebersetzung1980.json in Resources */,
 			);
@@ -510,6 +510,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -539,6 +540,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIRequiresFullScreen = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

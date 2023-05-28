@@ -95,8 +95,7 @@ class SelectedNoveneViewController: UIViewController, UIPickerViewDataSource, UI
         textViewNovene.scrollRangeToVisible(NSRange(location: 0, length: 0))
         
         buttonGoToLitanei.setTitle(passedNovene[row].Litaneiueberschrift, for: .normal)
-        print(self.textViewNovene.contentSize.height)
-        print(self.textViewNovene.frame.size.height)
+        
         //Show Button when TextView doesn't require to scroll
         if (self.textViewNovene.contentSize.height-5 <= self.textViewNovene.frame.size.height && row != 0 && passedNovene[1].Litanei?.isEmpty == false) {
             buttonGoToLitanei.isHidden = false

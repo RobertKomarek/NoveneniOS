@@ -45,7 +45,6 @@ class ErinnerungViewController: UIViewController, UIPickerViewDelegate, UIPicker
                 self.present(alertController, animated: true, completion: nil)*/
             }
         }
-        
     }
     
     @IBAction func erinnnerungBestaetigen(_ sender: Any) {
@@ -77,15 +76,6 @@ class ErinnerungViewController: UIViewController, UIPickerViewDelegate, UIPicker
             content.title = "Novenen"
             content.body = "Die Novene \(self.selectedNovene) beginnt heute!"
             content.sound = UNNotificationSound.default
-            // Get the system image for the icon
-            /*let iconName = "pigeon"
-            guard let iconURL = Bundle.main.url(forResource: iconName, withExtension: "png", subdirectory: "Assets.xcassets") else { return }
-            // Create a notification attachment with the image
-            if let attachment = try? UNNotificationAttachment(identifier: "iconAttachment", url: iconURL, options: nil) {
-                // Set the attachment as the notification's icon
-                content.attachments = [attachment]
-            }*/
-          
 
             // Create a request for the notification
             let request = UNNotificationRequest(identifier: "novenenErinnerung", content: content, trigger: trigger)

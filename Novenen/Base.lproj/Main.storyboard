@@ -101,7 +101,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JX2-R6-tkS">
-                                <rect key="frame" x="5" y="171.33333333333334" width="355" height="32.333333333333343"/>
+                                <rect key="frame" x="5" y="171.33333333333334" width="420" height="32.333333333333343"/>
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                 <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -137,41 +137,28 @@
                                     <segue destination="Jfe-WS-Rlh" kind="show" identifier="segueZurLitanei" id="Cyt-Wq-XBo"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EtS-Xw-Zfg">
-                                <rect key="frame" x="365" y="169.33333333333334" width="60" height="34.333333333333343"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="60" id="AJh-ib-hV3"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="speaker.wave.3.fill" catalog="system"/>
-                                <connections>
-                                    <action selector="readAloudText:" destination="4ah-wm-Vz5" eventType="touchUpInside" id="S3D-lF-mcX"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kl8-oY-OzJ"/>
                         <color key="backgroundColor" name="parchment_paper"/>
                         <constraints>
                             <constraint firstItem="1ek-gp-vFh" firstAttribute="leading" secondItem="kl8-oY-OzJ" secondAttribute="leading" id="32F-Fe-TnD"/>
+                            <constraint firstItem="JX2-R6-tkS" firstAttribute="centerX" secondItem="Uav-lO-v5q" secondAttribute="centerX" id="64v-9S-Bmc"/>
                             <constraint firstItem="dUW-e2-EuR" firstAttribute="leading" secondItem="kl8-oY-OzJ" secondAttribute="leading" id="8IN-WV-N1v"/>
                             <constraint firstItem="1ek-gp-vFh" firstAttribute="top" secondItem="QC1-Qf-E5t" secondAttribute="bottom" constant="5" id="B7D-kp-zSx"/>
-                            <constraint firstItem="JX2-R6-tkS" firstAttribute="leading" secondItem="kl8-oY-OzJ" secondAttribute="leading" constant="5" id="BCT-xj-9YC"/>
                             <constraint firstItem="1ek-gp-vFh" firstAttribute="bottom" secondItem="kl8-oY-OzJ" secondAttribute="bottom" id="KWK-UU-h8r"/>
-                            <constraint firstItem="EtS-Xw-Zfg" firstAttribute="leading" secondItem="JX2-R6-tkS" secondAttribute="trailing" constant="5" id="L1W-2V-sU7"/>
+                            <constraint firstItem="JX2-R6-tkS" firstAttribute="leading" secondItem="kl8-oY-OzJ" secondAttribute="leading" constant="5" id="Ktx-Kl-2gJ"/>
                             <constraint firstItem="JX2-R6-tkS" firstAttribute="top" secondItem="kl8-oY-OzJ" secondAttribute="top" constant="15" id="PV1-ku-nX6"/>
+                            <constraint firstItem="kl8-oY-OzJ" firstAttribute="trailing" secondItem="JX2-R6-tkS" secondAttribute="trailing" constant="5" id="QE0-fF-nI6"/>
                             <constraint firstItem="dUW-e2-EuR" firstAttribute="top" secondItem="JX2-R6-tkS" secondAttribute="bottom" constant="15" id="bP9-QG-Qz9"/>
                             <constraint firstItem="dUW-e2-EuR" firstAttribute="trailing" secondItem="kl8-oY-OzJ" secondAttribute="trailing" id="bjZ-3K-vtY"/>
                             <constraint firstItem="1ek-gp-vFh" firstAttribute="top" secondItem="dUW-e2-EuR" secondAttribute="bottom" id="ivE-Wg-qRv"/>
                             <constraint firstItem="kl8-oY-OzJ" firstAttribute="trailing" secondItem="QC1-Qf-E5t" secondAttribute="trailing" constant="15" id="kIN-oR-yj8"/>
                             <constraint firstItem="kl8-oY-OzJ" firstAttribute="trailing" secondItem="1ek-gp-vFh" secondAttribute="trailing" id="ks7-MB-fAD"/>
-                            <constraint firstItem="dUW-e2-EuR" firstAttribute="top" secondItem="EtS-Xw-Zfg" secondAttribute="bottom" constant="15" id="v3s-Ca-RTa"/>
-                            <constraint firstItem="kl8-oY-OzJ" firstAttribute="trailing" secondItem="EtS-Xw-Zfg" secondAttribute="trailing" constant="5" id="yGx-Su-Lj6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" style="browser" id="tMf-9R-oke"/>
                     <connections>
                         <outlet property="buttonGoToLitanei" destination="QC1-Qf-E5t" id="IAO-v3-fbO"/>
-                        <outlet property="buttonReadAloudText" destination="EtS-Xw-Zfg" id="XPg-em-lm2"/>
                         <outlet property="labelTagesueberschrift" destination="JX2-R6-tkS" id="Stm-HP-Nym"/>
                         <outlet property="pickerViewTage" destination="1ek-gp-vFh" id="P1m-dN-LyN"/>
                         <outlet property="textViewNovene" destination="dUW-e2-EuR" id="eVl-pB-eXj"/>
@@ -274,7 +261,7 @@
                                     <action selector="buttonKapitelVorClicked" destination="rZe-il-yO0" eventType="touchUpInside" id="UHd-Qq-16Y"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KzW-0M-8Uw">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KzW-0M-8Uw">
                                 <rect key="frame" x="186" y="779.66666666666663" width="58.333333333333343" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="speaker.wave.3.fill" catalog="system"/>
