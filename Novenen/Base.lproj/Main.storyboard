@@ -381,26 +381,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="849"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calender" translatesAutoresizingMaskIntoConstraints="NO" id="dk7-JU-fHD" userLabel="image calender">
-                                <rect key="frame" x="0.0" y="74" width="430" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="llm-A1-0M7"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUW-5v-KBz" userLabel="Label Datum">
-                                <rect key="frame" x="5" y="189" width="420" height="147"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <pickerView contentMode="scaleToFill" verticalHuggingPriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="Z3H-Qd-gMU">
-                                <rect key="frame" x="0.0" y="339" width="430" height="216"/>
-                            </pickerView>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="5PD-ZB-qce">
-                                <rect key="frame" x="0.0" y="558" width="430" height="216"/>
-                            </datePicker>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="cqe-Vx-UJA">
+                                <rect key="frame" x="0.0" y="59" width="430" height="715"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calender" translatesAutoresizingMaskIntoConstraints="NO" id="dk7-JU-fHD" userLabel="image calender">
+                                        <rect key="frame" x="0.0" y="0.0" width="430" height="160"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="llm-A1-0M7"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUW-5v-KBz" userLabel="Label Datum">
+                                        <rect key="frame" x="0.0" y="185" width="430" height="160"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <pickerView contentMode="scaleToFill" verticalHuggingPriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="Z3H-Qd-gMU">
+                                        <rect key="frame" x="0.0" y="370" width="430" height="160"/>
+                                    </pickerView>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="5PD-ZB-qce">
+                                        <rect key="frame" x="0.0" y="555" width="430" height="160"/>
+                                        <locale key="locale" localeIdentifier="de"/>
+                                    </datePicker>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tQo-eP-SUA" userLabel="Button Bestätigen">
-                                <rect key="frame" x="105" y="789" width="220" height="35"/>
+                                <rect key="frame" x="105.00000000000001" y="789" width="220.33333333333337" height="35"/>
                                 <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="tBI-7o-Qc1"/>
@@ -416,22 +422,12 @@
                         <viewLayoutGuide key="safeArea" id="S2j-Oj-OF2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="dk7-JU-fHD" firstAttribute="top" secondItem="S2j-Oj-OF2" secondAttribute="top" constant="15" id="0sP-hz-nQp"/>
-                            <constraint firstItem="dk7-JU-fHD" firstAttribute="leading" secondItem="dvg-If-dEM" secondAttribute="leading" id="8Bd-Jb-PfQ"/>
-                            <constraint firstAttribute="trailing" secondItem="dk7-JU-fHD" secondAttribute="trailing" id="Aex-uZ-bOg"/>
                             <constraint firstItem="S2j-Oj-OF2" firstAttribute="bottom" secondItem="tQo-eP-SUA" secondAttribute="bottom" constant="25" id="Cls-sB-eCW"/>
-                            <constraint firstItem="S2j-Oj-OF2" firstAttribute="trailing" secondItem="HUW-5v-KBz" secondAttribute="trailing" constant="5" id="FBD-VL-i0r"/>
-                            <constraint firstItem="HUW-5v-KBz" firstAttribute="leading" secondItem="S2j-Oj-OF2" secondAttribute="leading" constant="5" id="I9N-Pl-Y2w"/>
-                            <constraint firstItem="5PD-ZB-qce" firstAttribute="top" secondItem="Z3H-Qd-gMU" secondAttribute="bottom" constant="3" id="NaQ-z8-DGZ"/>
-                            <constraint firstItem="5PD-ZB-qce" firstAttribute="leading" secondItem="S2j-Oj-OF2" secondAttribute="leading" id="OhI-Qa-7gw"/>
-                            <constraint firstItem="tQo-eP-SUA" firstAttribute="top" secondItem="5PD-ZB-qce" secondAttribute="bottom" constant="15" id="U42-iF-isJ"/>
-                            <constraint firstItem="Z3H-Qd-gMU" firstAttribute="leading" secondItem="S2j-Oj-OF2" secondAttribute="leading" id="VDW-W2-y6M"/>
+                            <constraint firstItem="cqe-Vx-UJA" firstAttribute="leading" secondItem="S2j-Oj-OF2" secondAttribute="leading" id="Fcb-cs-owg"/>
+                            <constraint firstItem="cqe-Vx-UJA" firstAttribute="top" secondItem="S2j-Oj-OF2" secondAttribute="top" id="Npg-cf-14s"/>
+                            <constraint firstItem="S2j-Oj-OF2" firstAttribute="trailing" secondItem="cqe-Vx-UJA" secondAttribute="trailing" id="YMl-Lc-phb"/>
                             <constraint firstItem="tQo-eP-SUA" firstAttribute="centerX" secondItem="dvg-If-dEM" secondAttribute="centerX" id="Zmh-Vs-ESB"/>
-                            <constraint firstItem="5PD-ZB-qce" firstAttribute="trailing" secondItem="S2j-Oj-OF2" secondAttribute="trailing" id="auc-fS-AAU"/>
-                            <constraint firstItem="Z3H-Qd-gMU" firstAttribute="trailing" secondItem="S2j-Oj-OF2" secondAttribute="trailing" id="hyQ-92-EPz"/>
-                            <constraint firstItem="dk7-JU-fHD" firstAttribute="centerX" secondItem="dvg-If-dEM" secondAttribute="centerX" id="ih2-tr-28w"/>
-                            <constraint firstItem="Z3H-Qd-gMU" firstAttribute="top" secondItem="HUW-5v-KBz" secondAttribute="bottom" constant="3" id="kCo-KU-sdN"/>
-                            <constraint firstItem="HUW-5v-KBz" firstAttribute="top" secondItem="dk7-JU-fHD" secondAttribute="bottom" constant="15" id="qQo-KP-AZ4"/>
+                            <constraint firstItem="tQo-eP-SUA" firstAttribute="top" secondItem="cqe-Vx-UJA" secondAttribute="bottom" constant="15" id="lhe-10-o8F"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Erinnerung" image="calendar" catalog="system" id="oJg-cV-CbP"/>
@@ -444,7 +440,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HS6-wJ-4vl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2162" y="715"/>
+            <point key="canvasLocation" x="2161.3953488372094" y="714.59227467811161"/>
         </scene>
         <!--Lesezeichen-->
         <scene sceneID="fTm-e5-FTi">
@@ -455,22 +451,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="2a4-iy-5WF">
-                                <rect key="frame" x="0.0" y="74" width="430" height="700"/>
+                                <rect key="frame" x="0.0" y="59" width="430" height="715"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book" translatesAutoresizingMaskIntoConstraints="NO" id="R8F-sF-PxO">
-                                        <rect key="frame" x="0.0" y="0.0" width="430" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="430" height="170"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="LmT-6S-2aI"/>
+                                            <constraint firstAttribute="height" constant="170" id="IZN-ll-Du6"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zum Löschen auf das Lesezeichen tippen!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGp-U4-REP">
-                                        <rect key="frame" x="0.0" y="125" width="430" height="20"/>
+                                        <rect key="frame" x="0.0" y="195" width="430" height="20"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="17"/>
-                                        <color key="textColor" red="0.79168325660000005" green="0.37842524049999998" blue="0.31709522010000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="textColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="u0f-JN-zzh">
-                                        <rect key="frame" x="0.0" y="170" width="430" height="370"/>
+                                        <rect key="frame" x="0.0" y="240" width="430" height="315"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyTableViewCell" id="DIY-dc-Mkt" customClass="MyTableViewCell" customModule="Novenen" customModuleProvider="target">
@@ -534,7 +530,7 @@
                                         </prototypes>
                                     </tableView>
                                     <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QiA-6A-D6a">
-                                        <rect key="frame" x="0.0" y="565" width="430" height="135"/>
+                                        <rect key="frame" x="0.0" y="580" width="430" height="135"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="135" id="JRK-kh-oX5"/>
                                         </constraints>
@@ -558,7 +554,7 @@
                         <viewLayoutGuide key="safeArea" id="cyh-9V-Hog"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="2a4-iy-5WF" firstAttribute="top" secondItem="cyh-9V-Hog" secondAttribute="top" constant="15" id="0ED-Yo-74C"/>
+                            <constraint firstItem="2a4-iy-5WF" firstAttribute="top" secondItem="cyh-9V-Hog" secondAttribute="top" id="0ED-Yo-74C"/>
                             <constraint firstItem="cyh-9V-Hog" firstAttribute="trailing" secondItem="2a4-iy-5WF" secondAttribute="trailing" id="BZW-ef-c88"/>
                             <constraint firstItem="2a4-iy-5WF" firstAttribute="leading" secondItem="cyh-9V-Hog" secondAttribute="leading" id="EMm-8e-n15"/>
                             <constraint firstItem="rA4-dT-MaV" firstAttribute="centerX" secondItem="DGK-29-Ej6" secondAttribute="centerX" id="T3f-7P-hBO"/>
@@ -796,8 +792,8 @@
         <image name="biblePanorama12" width="626" height="768"/>
         <image name="book" width="512" height="512"/>
         <image name="book.closed" catalog="system" width="115" height="128"/>
-        <image name="bookmark" width="512" height="512"/>
         <image name="bookmark" catalog="system" width="110" height="128"/>
+        <image name="bookmark" width="512" height="512"/>
         <image name="calendar" catalog="system" width="128" height="107"/>
         <image name="calender" width="512" height="512"/>
         <image name="hand.tap.fill" catalog="system" width="115" height="128"/>
