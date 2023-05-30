@@ -19,6 +19,7 @@ class LesezeichenViewController: UIViewController, UITableViewDelegate, UITableV
     var selectedNovene: String = ""
     var selectedTag: Int = 0
     
+    @IBOutlet weak var imageBook: UIImageView!
     @IBOutlet weak var pickerViewLesezeichenHinzufuegen: UIPickerView!
     @IBOutlet weak var buttonLesezeichenHinzufuegen: UIButton!
     @IBOutlet weak var tableViewBookmarks: UITableView!
@@ -79,6 +80,8 @@ class LesezeichenViewController: UIViewController, UITableViewDelegate, UITableV
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.imageBook.alpha = 0.1
         
         //Lesezeichen laden
         if let encoded = UserDefaults.standard.object(forKey: "Lesezeichen") as? Data {

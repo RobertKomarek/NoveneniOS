@@ -3,6 +3,7 @@ import UserNotifications
 
 class ErinnerungViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UNUserNotificationCenterDelegate {
     
+    @IBOutlet weak var imageCalender: UIImageView!
     @IBOutlet weak var labelDatumNovene: UILabel!
     @IBOutlet weak var pickerNovenen: UIPickerView!
     @IBOutlet weak var datePicker: UIDatePicker!
@@ -12,10 +13,12 @@ class ErinnerungViewController: UIViewController, UIPickerViewDelegate, UIPicker
     var selectedDate = Date()
     
     var pickerData: [[String]] = [["Fatima", "5. bis 12. Mai"], ["Franz von Sales", "Novene zu Franz von Sales"], ["Göttliche Barmherzigkeit", "Karfreitag bis zum Vortag des Festes der göttlichen Barmherzigkeit (erster Sonntag nach Ostern)"], ["Heiliger Geist", "Von Christi Himmelfahrt bis Freitag vor Pfingsten"], ["Heiliger Josef", "10. bis 18. März"], ["Kostbares Blut", "Novene zum Kostbaren Blute Jesu Christi"], ["Lourdes", "Neun Tage vor einer Lourdes-Wallfahrt"], ["Medjugorje", "15. bis 24. Juni"], ["Mutter der immerwährenden Hilfe", "Eine Novene von P. Karl Jordan"], ["Sieben Zufluchten", "Novene zu den sieben Zufluchten"], ["Unbefleckte Empfängnis", "29. November bis 7. Dezember"]]
-    
-
+  
+   
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        imageCalender.alpha = 0.1
         
         pickerNovenen.delegate = self
         pickerNovenen.dataSource = self
