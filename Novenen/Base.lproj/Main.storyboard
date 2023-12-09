@@ -826,8 +826,8 @@
         <image name="biblePanorama12" width="626" height="768"/>
         <image name="book" width="512" height="512"/>
         <image name="book.closed" catalog="system" width="115" height="128"/>
-        <image name="bookmark" width="50" height="50"/>
         <image name="bookmark" catalog="system" width="110" height="128"/>
+        <image name="bookmark" width="50" height="50"/>
         <image name="calendar" catalog="system" width="128" height="107"/>
         <image name="calender" width="512" height="512"/>
         <image name="hand.tap.fill" catalog="system" width="115" height="128"/>

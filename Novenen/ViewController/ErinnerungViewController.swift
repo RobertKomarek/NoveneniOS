@@ -12,7 +12,7 @@ class ErinnerungViewController: UIViewController, UIPickerViewDelegate, UIPicker
     var selectedNovene: String = "Fatima" //Default value "Fatima"
     var selectedDate = Date()
     
-    var pickerData: [[String]] = [["Fatima", "5. bis 12. Mai"], ["Franz von Sales", "Novene zu Franz von Sales"], ["Göttliche Barmherzigkeit", "Karfreitag bis zum Vortag des Festes der göttlichen Barmherzigkeit (erster Sonntag nach Ostern)"], ["Heiliger Geist", "Von Christi Himmelfahrt bis Freitag vor Pfingsten"], ["Heiliger Josef", "10. bis 18. März"], ["Kostbares Blut", "Novene zum Kostbaren Blute Jesu Christi"], ["Lourdes", "Neun Tage vor einer Lourdes-Wallfahrt"], ["Medjugorje", "15. bis 24. Juni"], ["Mutter der immerwährenden Hilfe", "Eine Novene von P. Karl Jordan"], ["Sieben Zufluchten", "Novene zu den sieben Zufluchten"], ["Unbefleckte Empfängnis", "29. November bis 7. Dezember"]]
+    var pickerData: [[String]] = [["Fatima", "5. bis 12. Mai"], ["Franz von Sales", "Novene zu Franz von Sales"], ["Göttliche Barmherzigkeit", "Karfreitag bis zum Vortag des Festes der göttlichen Barmherzigkeit (erster Sonntag nach Ostern)"], ["Heiliger Geist", "Von Christi Himmelfahrt bis Freitag vor Pfingsten"], ["Heiliger Josef", "10. bis 18. März"], ["Kostbares Blut", "Novene zum Kostbaren Blute Jesu Christi"], ["Lourdes", "Neun Tage vor einer Lourdes-Wallfahrt"], ["Medjugorje", "15. bis 24. Juni"], ["Mutter der immerwährenden Hilfe", "Eine Novene von P. Karl Jordan"], ["Sieben Zufluchten", "Novene zu den sieben Zufluchten"], ["Unbefleckte Empfängnis", "29. November bis 7. Dezember"], ["Wunderbare Medaille", "Novene zu Ehren Unserer Lieben Frau von der Wunderbaren Medaille"]]
   
    
     override func viewDidLoad() {
