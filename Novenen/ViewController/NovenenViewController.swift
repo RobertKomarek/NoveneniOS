@@ -31,7 +31,7 @@ class NovenenViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         pickerViewNovenen.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]*/
         //Autoadjust height of label
         labelDescriptionNovene.numberOfLines = 0
-        [labelDescriptionNovene .sizeToFit]
+        labelDescriptionNovene .sizeToFit()
         labelDescriptionNovene.layer.cornerRadius = 10.0
         labelDescriptionNovene.clipsToBounds = true
         
@@ -63,7 +63,7 @@ class NovenenViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         //Autoadjust height of label
         labelDescriptionNovene.numberOfLines = 0
         labelDescriptionNovene.text = pickerData[row][1]
-        [labelDescriptionNovene .sizeToFit]
+        labelDescriptionNovene .sizeToFit()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

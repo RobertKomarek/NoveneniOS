@@ -1,10 +1,3 @@
-//
-//  LitaneiViewController.swift
-//  Novenen
-//
-//  Created by Marina Komarek on 12.04.23.
-//
-
 import UIKit
 
 class LitaneiViewController: UIViewController {

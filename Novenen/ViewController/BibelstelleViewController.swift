@@ -1,5 +1,5 @@
 import UIKit
-import DeviceKit
+//import DeviceKit
 
 class BibelstelleViewController: UIViewController {
     

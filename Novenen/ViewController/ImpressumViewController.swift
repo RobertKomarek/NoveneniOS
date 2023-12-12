@@ -70,7 +70,7 @@ class ImpressumViewController: UIViewController, MFMailComposeViewControllerDele
         super.viewDidLoad()
         
         if UserDefaults.standard.object(forKey: "Fontsize") != nil {
-            var defaultFontsize = UserDefaults.standard.double(forKey: "Fontsize")
+            let defaultFontsize = UserDefaults.standard.double(forKey: "Fontsize")
             // Create a new UIFont object with the desired font size
             let newFont = textViewBeispieltext.font?.withSize(defaultFontsize)
             textViewBeispieltext.font = newFont
